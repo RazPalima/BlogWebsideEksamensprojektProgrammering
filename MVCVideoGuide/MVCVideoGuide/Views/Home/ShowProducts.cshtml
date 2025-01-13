@@ -1,0 +1,12 @@
+﻿@model List<Product>
+
+<h1>Here are the available products: @Model.Count</h1>
+
+<ul>
+    @foreach(Product item in Model)
+    {
+        <li>
+            <p>@item.Name   @item.Cost</p>
+        </li>
+    }
+</ul>
