@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+C+Uo288nJY=",
+  "dgSpecHash": "3HLnnKrBzFk=",
   "success": true,
-  "projectFilePath": "C:\\Users\\amila\\OneDrive - TEC\\Documents\\L3d\\C# kode\\MVCVideoGuide\\MVCVideoGuide\\MVCVideoGuide.csproj",
+  "projectFilePath": "C:\\Users\\amila\\OneDrive - TEC\\Documents\\GitHub\\BlogWebsideEksamensprojektProgrammering\\MVCVideoGuide\\MVCVideoGuide\\MVCVideoGuide.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\amila\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\amila\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

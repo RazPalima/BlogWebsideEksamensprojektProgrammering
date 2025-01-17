@@ -3,7 +3,7 @@ using MVCVideoGuide.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddDbContext<VideoDbContext>();
+builder.Services.AddDbContext<BlogDbContext>();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

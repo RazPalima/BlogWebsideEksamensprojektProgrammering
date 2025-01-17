@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace MVCVideoGuide.Migrations
 {
-    [DbContext(typeof(VideoDbContext))]
+    [DbContext(typeof(BlogDbContext))]
     [Migration("20250113015850_RevertCostChange")]
     partial class RevertCostChange
     {

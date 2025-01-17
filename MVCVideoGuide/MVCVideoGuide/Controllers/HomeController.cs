@@ -10,9 +10,9 @@ namespace MVCVideoGuide.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private readonly VideoDbContext _context;
+        private readonly BlogDbContext _context;
 
-        public HomeController(ILogger<HomeController> logger, VideoDbContext context)
+        public HomeController(ILogger<HomeController> logger, BlogDbContext context)
         {
             _logger = logger;
             _context = context;
@@ -22,7 +22,7 @@ namespace MVCVideoGuide.Controllers
         {
             return View();
         }
-        // Video 4 timestap 26:31. Den helt nye Persons database er ikke blevet introduceret
+        // Video 4 timestamp 26:31. Den helt nye Persons database er ikke blevet introduceret
         // i videoen.
         //public IActionResult Index2(Persons p)
         //{
@@ -38,22 +38,22 @@ namespace MVCVideoGuide.Controllers
         {
             return View();
         }
-        public IActionResult ShowProducts()
+        public IActionResult ShowBlogs()
         {
-            List<Product> result = _context.Products.OrderBy(p => p.Cost).ToList();
+            List<Blog> result = _context.Blogs.OrderBy(p => p.Title).ToList();
             return View(result);
 
         }
         [HttpGet]
-        public IActionResult AddProduct()
+        public IActionResult WriteBlog()
         {
             return View();
 
         }
         [HttpPost]
-        public IActionResult AddProduct(Product product)
+        public IActionResult WriteBlog(Blog blog_instance)
         {
-            _context.Products.Add(product);
+            _context.Blogs.Add(blog_instance);
             _context.SaveChanges();
             return View();
         }

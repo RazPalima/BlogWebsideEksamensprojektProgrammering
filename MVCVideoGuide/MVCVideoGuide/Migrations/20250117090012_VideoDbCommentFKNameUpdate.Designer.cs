@@ -4,6 +4,7 @@ using MVCVideoGuide.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MVCVideoGuide.Migrations
 {
     [DbContext(typeof(BlogDbContext))]
-    partial class VideoDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250117090012_VideoDbCommentFKNameUpdate")]
+    partial class VideoDbCommentFKNameUpdate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -34,7 +37,7 @@ namespace MVCVideoGuide.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("CommentId")
+                    b.Property<int>("CommentId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("CreatedDate")
@@ -86,7 +89,9 @@ namespace MVCVideoGuide.Migrations
                 {
                     b.HasOne("MVCVideoGuide.Data.Entities.Comment", "Comment")
                         .WithMany()
-                        .HasForeignKey("CommentId");
+                        .HasForeignKey("CommentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Comment");
                 });

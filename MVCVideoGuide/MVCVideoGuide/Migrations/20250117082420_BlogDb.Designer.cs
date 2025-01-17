@@ -4,6 +4,7 @@ using MVCVideoGuide.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MVCVideoGuide.Migrations
 {
     [DbContext(typeof(BlogDbContext))]
-    partial class VideoDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250117082420_BlogDb")]
+    partial class BlogDb
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -34,9 +37,6 @@ namespace MVCVideoGuide.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("CommentId")
-                        .HasColumnType("int");
-
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
@@ -52,8 +52,6 @@ namespace MVCVideoGuide.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("CommentId");
 
                     b.ToTable("Blogs");
                 });
@@ -79,16 +77,7 @@ namespace MVCVideoGuide.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Comments");
-                });
-
-            modelBuilder.Entity("MVCVideoGuide.Data.Entities.Blog", b =>
-                {
-                    b.HasOne("MVCVideoGuide.Data.Entities.Comment", "Comment")
-                        .WithMany()
-                        .HasForeignKey("CommentId");
-
-                    b.Navigation("Comment");
+                    b.ToTable("Products");
                 });
 #pragma warning restore 612, 618
         }
