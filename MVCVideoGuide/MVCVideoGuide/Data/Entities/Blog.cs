@@ -9,7 +9,7 @@ namespace MVCVideoGuide.Data.Entities
         public DateTime CreatedDate { get; set; }
         public string User { get; set; }
         public string Title { get; set; }
-        public string BlogText { get; set; }
+        public string Text { get; set; }
         public int LikeCount { get; set; }
     }
 }
