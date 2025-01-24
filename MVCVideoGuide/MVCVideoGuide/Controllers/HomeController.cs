@@ -40,8 +40,13 @@ namespace MVCVideoGuide.Controllers
         }
         public IActionResult SeeBlogs()
         {
+            List<Blog> result = _context.Blogs.OrderBy(p => p.Title).ToList(); //CreatedDate ændre det til dato
+            return View(result);
 
-            List<Blog> result = _context.Blogs.OrderBy(p => p.Title).ToList();
+        }
+        public IActionResult SeeBlogsDate()
+        {
+            List<Blog> result = _context.Blogs.OrderBy(p => p.CreatedDate).ToList(); //CreatedDate ændre det til dato
             return View(result);
 
         }

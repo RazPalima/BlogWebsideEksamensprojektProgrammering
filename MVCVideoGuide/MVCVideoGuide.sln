@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35527.113 d17.12
+VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCVideoGuide", "MVCVideoGuide\MVCVideoGuide.csproj", "{4E9D5642-4634-4465-ADF8-C45ACC74785F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MVCVideoGuide", "MVCVideoGuide\MVCVideoGuide.csproj", "{4E9D5642-4634-4465-ADF8-C45ACC74785F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,5 +18,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3AC0105D-6792-4072-A43E-1DAD76A900AD}
 	EndGlobalSection
 EndGlobal
