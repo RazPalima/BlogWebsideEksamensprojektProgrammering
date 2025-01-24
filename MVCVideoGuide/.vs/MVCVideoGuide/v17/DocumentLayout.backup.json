@@ -7,115 +7,16 @@
       "RelativeMoniker": "D:0:0:{4E9D5642-4634-4465-ADF8-C45ACC74785F}|MVCVideoGuide\\MVCVideoGuide.csproj|solutionrelative:mvcvideoguide\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4E9D5642-4634-4465-ADF8-C45ACC74785F}|MVCVideoGuide\\MVCVideoGuide.csproj|c:\\users\\amila\\onedrive - tec\\documents\\github\\blogwebsideeksamensprojektprogrammering\\mvcvideoguide\\mvcvideoguide\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4E9D5642-4634-4465-ADF8-C45ACC74785F}|MVCVideoGuide\\MVCVideoGuide.csproj|solutionrelative:mvcvideoguide\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{4E9D5642-4634-4465-ADF8-C45ACC74785F}|MVCVideoGuide\\MVCVideoGuide.csproj|c:\\users\\amila\\onedrive - tec\\documents\\github\\blogwebsideeksamensprojektprogrammering\\mvcvideoguide\\mvcvideoguide\\data\\blogdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E9D5642-4634-4465-ADF8-C45ACC74785F}|MVCVideoGuide\\MVCVideoGuide.csproj|solutionrelative:mvcvideoguide\\data\\blogdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4E9D5642-4634-4465-ADF8-C45ACC74785F}|MVCVideoGuide\\MVCVideoGuide.csproj|c:\\users\\amila\\onedrive - tec\\documents\\github\\blogwebsideeksamensprojektprogrammering\\mvcvideoguide\\mvcvideoguide\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4E9D5642-4634-4465-ADF8-C45ACC74785F}|MVCVideoGuide\\MVCVideoGuide.csproj|solutionrelative:mvcvideoguide\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{4E9D5642-4634-4465-ADF8-C45ACC74785F}|MVCVideoGuide\\MVCVideoGuide.csproj|c:\\users\\amila\\onedrive - tec\\documents\\github\\blogwebsideeksamensprojektprogrammering\\mvcvideoguide\\mvcvideoguide\\data\\entities\\blog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E9D5642-4634-4465-ADF8-C45ACC74785F}|MVCVideoGuide\\MVCVideoGuide.csproj|solutionrelative:mvcvideoguide\\data\\entities\\blog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4E9D5642-4634-4465-ADF8-C45ACC74785F}|MVCVideoGuide\\MVCVideoGuide.csproj|c:\\users\\amila\\onedrive - tec\\documents\\github\\blogwebsideeksamensprojektprogrammering\\mvcvideoguide\\mvcvideoguide\\views\\home\\writeblog.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4E9D5642-4634-4465-ADF8-C45ACC74785F}|MVCVideoGuide\\MVCVideoGuide.csproj|solutionrelative:mvcvideoguide\\views\\home\\writeblog.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E9D5642-4634-4465-ADF8-C45ACC74785F}|MVCVideoGuide\\MVCVideoGuide.csproj|c:\\users\\amila\\onedrive - tec\\documents\\github\\blogwebsideeksamensprojektprogrammering\\mvcvideoguide\\mvcvideoguide\\views\\home\\addproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4E9D5642-4634-4465-ADF8-C45ACC74785F}|MVCVideoGuide\\MVCVideoGuide.csproj|solutionrelative:mvcvideoguide\\views\\home\\addproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E9D5642-4634-4465-ADF8-C45ACC74785F}|MVCVideoGuide\\MVCVideoGuide.csproj|c:\\users\\amila\\onedrive - tec\\documents\\github\\blogwebsideeksamensprojektprogrammering\\mvcvideoguide\\mvcvideoguide\\data\\entities\\orderproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E9D5642-4634-4465-ADF8-C45ACC74785F}|MVCVideoGuide\\MVCVideoGuide.csproj|solutionrelative:mvcvideoguide\\data\\entities\\orderproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E9D5642-4634-4465-ADF8-C45ACC74785F}|MVCVideoGuide\\MVCVideoGuide.csproj|c:\\users\\amila\\onedrive - tec\\documents\\github\\blogwebsideeksamensprojektprogrammering\\mvcvideoguide\\mvcvideoguide\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{4E9D5642-4634-4465-ADF8-C45ACC74785F}|MVCVideoGuide\\MVCVideoGuide.csproj|solutionrelative:mvcvideoguide\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E9D5642-4634-4465-ADF8-C45ACC74785F}|MVCVideoGuide\\MVCVideoGuide.csproj|c:\\users\\amila\\onedrive - tec\\documents\\github\\blogwebsideeksamensprojektprogrammering\\mvcvideoguide\\mvcvideoguide\\views\\shared\\_layout.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{4E9D5642-4634-4465-ADF8-C45ACC74785F}|MVCVideoGuide\\MVCVideoGuide.csproj|solutionrelative:mvcvideoguide\\views\\shared\\_layout.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E9D5642-4634-4465-ADF8-C45ACC74785F}|MVCVideoGuide\\MVCVideoGuide.csproj|c:\\users\\amila\\onedrive - tec\\documents\\github\\blogwebsideeksamensprojektprogrammering\\mvcvideoguide\\mvcvideoguide\\wwwroot\\js\\fetchapi.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{4E9D5642-4634-4465-ADF8-C45ACC74785F}|MVCVideoGuide\\MVCVideoGuide.csproj|solutionrelative:mvcvideoguide\\wwwroot\\js\\fetchapi.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E9D5642-4634-4465-ADF8-C45ACC74785F}|MVCVideoGuide\\MVCVideoGuide.csproj|c:\\users\\amila\\onedrive - tec\\documents\\github\\blogwebsideeksamensprojektprogrammering\\mvcvideoguide\\mvcvideoguide\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4E9D5642-4634-4465-ADF8-C45ACC74785F}|MVCVideoGuide\\MVCVideoGuide.csproj|solutionrelative:mvcvideoguide\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E9D5642-4634-4465-ADF8-C45ACC74785F}|MVCVideoGuide\\MVCVideoGuide.csproj|c:\\users\\amila\\onedrive - tec\\documents\\github\\blogwebsideeksamensprojektprogrammering\\mvcvideoguide\\mvcvideoguide\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4E9D5642-4634-4465-ADF8-C45ACC74785F}|MVCVideoGuide\\MVCVideoGuide.csproj|solutionrelative:mvcvideoguide\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E9D5642-4634-4465-ADF8-C45ACC74785F}|MVCVideoGuide\\MVCVideoGuide.csproj|c:\\users\\amila\\onedrive - tec\\documents\\github\\blogwebsideeksamensprojektprogrammering\\mvcvideoguide\\mvcvideoguide\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4E9D5642-4634-4465-ADF8-C45ACC74785F}|MVCVideoGuide\\MVCVideoGuide.csproj|solutionrelative:mvcvideoguide\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E9D5642-4634-4465-ADF8-C45ACC74785F}|MVCVideoGuide\\MVCVideoGuide.csproj|c:\\users\\amila\\onedrive - tec\\documents\\github\\blogwebsideeksamensprojektprogrammering\\mvcvideoguide\\mvcvideoguide\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E9D5642-4634-4465-ADF8-C45ACC74785F}|MVCVideoGuide\\MVCVideoGuide.csproj|solutionrelative:mvcvideoguide\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E9D5642-4634-4465-ADF8-C45ACC74785F}|MVCVideoGuide\\MVCVideoGuide.csproj|c:\\users\\amila\\onedrive - tec\\documents\\github\\blogwebsideeksamensprojektprogrammering\\mvcvideoguide\\mvcvideoguide\\data\\videodbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E9D5642-4634-4465-ADF8-C45ACC74785F}|MVCVideoGuide\\MVCVideoGuide.csproj|solutionrelative:mvcvideoguide\\data\\videodbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E9D5642-4634-4465-ADF8-C45ACC74785F}|MVCVideoGuide\\MVCVideoGuide.csproj|c:\\users\\amila\\onedrive - tec\\documents\\github\\blogwebsideeksamensprojektprogrammering\\mvcvideoguide\\mvcvideoguide\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4E9D5642-4634-4465-ADF8-C45ACC74785F}|MVCVideoGuide\\MVCVideoGuide.csproj|solutionrelative:mvcvideoguide\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E9D5642-4634-4465-ADF8-C45ACC74785F}|MVCVideoGuide\\MVCVideoGuide.csproj|c:\\users\\amila\\onedrive - tec\\documents\\github\\blogwebsideeksamensprojektprogrammering\\mvcvideoguide\\mvcvideoguide\\views\\home\\showproducts.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4E9D5642-4634-4465-ADF8-C45ACC74785F}|MVCVideoGuide\\MVCVideoGuide.csproj|solutionrelative:mvcvideoguide\\views\\home\\showproducts.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E9D5642-4634-4465-ADF8-C45ACC74785F}|MVCVideoGuide\\MVCVideoGuide.csproj|c:\\users\\amila\\onedrive - tec\\documents\\github\\blogwebsideeksamensprojektprogrammering\\mvcvideoguide\\mvcvideoguide\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{4E9D5642-4634-4465-ADF8-C45ACC74785F}|MVCVideoGuide\\MVCVideoGuide.csproj|solutionrelative:mvcvideoguide\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E9D5642-4634-4465-ADF8-C45ACC74785F}|MVCVideoGuide\\MVCVideoGuide.csproj|c:\\users\\amila\\onedrive - tec\\documents\\github\\blogwebsideeksamensprojektprogrammering\\mvcvideoguide\\mvcvideoguide\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{4E9D5642-4634-4465-ADF8-C45ACC74785F}|MVCVideoGuide\\MVCVideoGuide.csproj|solutionrelative:mvcvideoguide\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E9D5642-4634-4465-ADF8-C45ACC74785F}|MVCVideoGuide\\MVCVideoGuide.csproj|c:\\users\\amila\\onedrive - tec\\documents\\github\\blogwebsideeksamensprojektprogrammering\\mvcvideoguide\\mvcvideoguide\\data\\entities\\blogs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E9D5642-4634-4465-ADF8-C45ACC74785F}|MVCVideoGuide\\MVCVideoGuide.csproj|solutionrelative:mvcvideoguide\\data\\entities\\blogs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E9D5642-4634-4465-ADF8-C45ACC74785F}|MVCVideoGuide\\MVCVideoGuide.csproj|c:\\users\\amila\\onedrive - tec\\documents\\github\\blogwebsideeksamensprojektprogrammering\\mvcvideoguide\\mvcvideoguide\\data\\entities\\comments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E9D5642-4634-4465-ADF8-C45ACC74785F}|MVCVideoGuide\\MVCVideoGuide.csproj|solutionrelative:mvcvideoguide\\data\\entities\\comments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E9D5642-4634-4465-ADF8-C45ACC74785F}|MVCVideoGuide\\MVCVideoGuide.csproj|c:\\users\\amila\\onedrive - tec\\documents\\github\\blogwebsideeksamensprojektprogrammering\\mvcvideoguide\\mvcvideoguide\\data\\entities\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E9D5642-4634-4465-ADF8-C45ACC74785F}|MVCVideoGuide\\MVCVideoGuide.csproj|solutionrelative:mvcvideoguide\\data\\entities\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E9D5642-4634-4465-ADF8-C45ACC74785F}|MVCVideoGuide\\MVCVideoGuide.csproj|c:\\users\\amila\\onedrive - tec\\documents\\github\\blogwebsideeksamensprojektprogrammering\\mvcvideoguide\\mvcvideoguide\\migrations\\videodbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E9D5642-4634-4465-ADF8-C45ACC74785F}|MVCVideoGuide\\MVCVideoGuide.csproj|solutionrelative:mvcvideoguide\\migrations\\videodbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E9D5642-4634-4465-ADF8-C45ACC74785F}|MVCVideoGuide\\MVCVideoGuide.csproj|c:\\users\\amila\\onedrive - tec\\documents\\github\\blogwebsideeksamensprojektprogrammering\\mvcvideoguide\\mvcvideoguide\\data\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E9D5642-4634-4465-ADF8-C45ACC74785F}|MVCVideoGuide\\MVCVideoGuide.csproj|solutionrelative:mvcvideoguide\\data\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E9D5642-4634-4465-ADF8-C45ACC74785F}|MVCVideoGuide\\MVCVideoGuide.csproj|c:\\users\\amila\\onedrive - tec\\documents\\github\\blogwebsideeksamensprojektprogrammering\\mvcvideoguide\\mvcvideoguide\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4E9D5642-4634-4465-ADF8-C45ACC74785F}|MVCVideoGuide\\MVCVideoGuide.csproj|solutionrelative:mvcvideoguide\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/master/True/SqlTable/dbo.Products.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E9D5642-4634-4465-ADF8-C45ACC74785F}|MVCVideoGuide\\MVCVideoGuide.csproj|c:\\users\\amila\\onedrive - tec\\documents\\github\\blogwebsideeksamensprojektprogrammering\\mvcvideoguide\\mvcvideoguide\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{4E9D5642-4634-4465-ADF8-C45ACC74785F}|MVCVideoGuide\\MVCVideoGuide.csproj|solutionrelative:mvcvideoguide\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E9D5642-4634-4465-ADF8-C45ACC74785F}|MVCVideoGuide\\MVCVideoGuide.csproj|c:\\users\\amila\\onedrive - tec\\documents\\github\\blogwebsideeksamensprojektprogrammering\\mvcvideoguide\\mvcvideoguide\\mvcvideoguide.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
-      "RelativeMoniker": "D:0:0:{4E9D5642-4634-4465-ADF8-C45ACC74785F}|MVCVideoGuide\\MVCVideoGuide.csproj|solutionrelative:mvcvideoguide\\mvcvideoguide.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E9D5642-4634-4465-ADF8-C45ACC74785F}|MVCVideoGuide\\MVCVideoGuide.csproj|c:\\users\\amila\\onedrive - tec\\documents\\github\\blogwebsideeksamensprojektprogrammering\\mvcvideoguide\\mvcvideoguide\\migrations\\20250113003119_videodb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E9D5642-4634-4465-ADF8-C45ACC74785F}|MVCVideoGuide\\MVCVideoGuide.csproj|solutionrelative:mvcvideoguide\\migrations\\20250113003119_videodb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E9D5642-4634-4465-ADF8-C45ACC74785F}|MVCVideoGuide\\MVCVideoGuide.csproj|c:\\users\\amila\\onedrive - tec\\documents\\github\\blogwebsideeksamensprojektprogrammering\\mvcvideoguide\\mvcvideoguide\\views\\home\\about.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4E9D5642-4634-4465-ADF8-C45ACC74785F}|MVCVideoGuide\\MVCVideoGuide.csproj|solutionrelative:mvcvideoguide\\views\\home\\about.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{4E9D5642-4634-4465-ADF8-C45ACC74785F}|MVCVideoGuide\\MVCVideoGuide.csproj|c:\\users\\amila\\onedrive - tec\\documents\\github\\blogwebsideeksamensprojektprogrammering\\mvcvideoguide\\mvcvideoguide\\migrations\\20250113015850_revertcostchange.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E9D5642-4634-4465-ADF8-C45ACC74785F}|MVCVideoGuide\\MVCVideoGuide.csproj|solutionrelative:mvcvideoguide\\migrations\\20250113015850_revertcostchange.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -125,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -133,363 +34,55 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "WriteBlog.cshtml",
-              "DocumentMoniker": "C:\\Users\\amila\\OneDrive - TEC\\Documents\\GitHub\\BlogWebsideEksamensprojektProgrammering\\MVCVideoGuide\\MVCVideoGuide\\Views\\Home\\WriteBlog.cshtml",
-              "RelativeDocumentMoniker": "MVCVideoGuide\\Views\\Home\\WriteBlog.cshtml",
-              "ToolTip": "C:\\Users\\amila\\OneDrive - TEC\\Documents\\GitHub\\BlogWebsideEksamensprojektProgrammering\\MVCVideoGuide\\MVCVideoGuide\\Views\\Home\\WriteBlog.cshtml",
-              "RelativeToolTip": "MVCVideoGuide\\Views\\Home\\WriteBlog.cshtml",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAwwAkAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-17T07:47:26.484Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "site.js",
-              "DocumentMoniker": "C:\\Users\\amila\\OneDrive - TEC\\Documents\\GitHub\\BlogWebsideEksamensprojektProgrammering\\MVCVideoGuide\\MVCVideoGuide\\wwwroot\\js\\site.js",
-              "RelativeDocumentMoniker": "MVCVideoGuide\\wwwroot\\js\\site.js",
-              "ToolTip": "C:\\Users\\amila\\OneDrive - TEC\\Documents\\GitHub\\BlogWebsideEksamensprojektProgrammering\\MVCVideoGuide\\MVCVideoGuide\\wwwroot\\js\\site.js*",
-              "RelativeToolTip": "MVCVideoGuide\\wwwroot\\js\\site.js*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-01-17T07:41:42.662Z",
+              "DocumentIndex": 0,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\amila\\OneDrive - TEC\\Documents\\GitHub\\BlogWebsideEksamensprojektProgrammering\\MVCVideoGuide\\MVCVideoGuide\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "MVCVideoGuide\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\amila\\OneDrive - TEC\\Documents\\GitHub\\BlogWebsideEksamensprojektProgrammering\\MVCVideoGuide\\MVCVideoGuide\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "MVCVideoGuide\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAgwCoAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-17T08:41:47.732Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\amila\\OneDrive - TEC\\Documents\\GitHub\\BlogWebsideEksamensprojektProgrammering\\MVCVideoGuide\\MVCVideoGuide\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "MVCVideoGuide\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\amila\\OneDrive - TEC\\Documents\\GitHub\\BlogWebsideEksamensprojektProgrammering\\MVCVideoGuide\\MVCVideoGuide\\Views\\Home\\Index.cshtml*",
-              "RelativeToolTip": "MVCVideoGuide\\Views\\Home\\Index.cshtml*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-12T23:25:27.642Z",
+              "Title": "Blog.cs",
+              "DocumentMoniker": "C:\\Users\\amila\\OneDrive - TEC\\Documents\\GitHub\\BlogWebsideEksamensprojektProgrammering\\MVCVideoGuide\\MVCVideoGuide\\Data\\Entities\\Blog.cs",
+              "RelativeDocumentMoniker": "MVCVideoGuide\\Data\\Entities\\Blog.cs",
+              "ToolTip": "C:\\Users\\amila\\OneDrive - TEC\\Documents\\GitHub\\BlogWebsideEksamensprojektProgrammering\\MVCVideoGuide\\MVCVideoGuide\\Data\\Entities\\Blog.cs",
+              "RelativeToolTip": "MVCVideoGuide\\Data\\Entities\\Blog.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-17T08:39:01.478Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "20250113015850_RevertCostChange.cs",
+              "DocumentMoniker": "C:\\Users\\amila\\OneDrive - TEC\\Documents\\GitHub\\BlogWebsideEksamensprojektProgrammering\\MVCVideoGuide\\MVCVideoGuide\\Migrations\\20250113015850_RevertCostChange.cs",
+              "RelativeDocumentMoniker": "MVCVideoGuide\\Migrations\\20250113015850_RevertCostChange.cs",
+              "ToolTip": "C:\\Users\\amila\\OneDrive - TEC\\Documents\\GitHub\\BlogWebsideEksamensprojektProgrammering\\MVCVideoGuide\\MVCVideoGuide\\Migrations\\20250113015850_RevertCostChange.cs",
+              "RelativeToolTip": "MVCVideoGuide\\Migrations\\20250113015850_RevertCostChange.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-17T08:38:26.958Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\amila\\OneDrive - TEC\\Documents\\GitHub\\BlogWebsideEksamensprojektProgrammering\\MVCVideoGuide\\MVCVideoGuide\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "MVCVideoGuide\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\amila\\OneDrive - TEC\\Documents\\GitHub\\BlogWebsideEksamensprojektProgrammering\\MVCVideoGuide\\MVCVideoGuide\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "MVCVideoGuide\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAAB8AAABHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-12T23:26:23.085Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "OrderProduct.cs",
-              "DocumentMoniker": "C:\\Users\\amila\\OneDrive - TEC\\Documents\\GitHub\\BlogWebsideEksamensprojektProgrammering\\MVCVideoGuide\\MVCVideoGuide\\Data\\Entities\\OrderProduct.cs",
-              "RelativeDocumentMoniker": "MVCVideoGuide\\Data\\Entities\\OrderProduct.cs",
-              "ToolTip": "C:\\Users\\amila\\OneDrive - TEC\\Documents\\GitHub\\BlogWebsideEksamensprojektProgrammering\\MVCVideoGuide\\MVCVideoGuide\\Data\\Entities\\OrderProduct.cs",
-              "RelativeToolTip": "MVCVideoGuide\\Data\\Entities\\OrderProduct.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAoAAAAAAAAAA==",
+              "Title": "BlogDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\amila\\OneDrive - TEC\\Documents\\GitHub\\BlogWebsideEksamensprojektProgrammering\\MVCVideoGuide\\MVCVideoGuide\\Data\\BlogDbContext.cs",
+              "RelativeDocumentMoniker": "MVCVideoGuide\\Data\\BlogDbContext.cs",
+              "ToolTip": "C:\\Users\\amila\\OneDrive - TEC\\Documents\\GitHub\\BlogWebsideEksamensprojektProgrammering\\MVCVideoGuide\\MVCVideoGuide\\Data\\BlogDbContext.cs",
+              "RelativeToolTip": "MVCVideoGuide\\Data\\BlogDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-12T23:42:33.505Z",
+              "WhenOpened": "2025-01-17T08:33:55.163Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\amila\\OneDrive - TEC\\Documents\\GitHub\\BlogWebsideEksamensprojektProgrammering\\MVCVideoGuide\\MVCVideoGuide\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "MVCVideoGuide\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\amila\\OneDrive - TEC\\Documents\\GitHub\\BlogWebsideEksamensprojektProgrammering\\MVCVideoGuide\\MVCVideoGuide\\Controllers\\HomeController.cs*",
-              "RelativeToolTip": "MVCVideoGuide\\Controllers\\HomeController.cs*",
-              "ViewState": "AgIAACMAAAAAAAAAAAAgwCYAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-13T10:17:41.746Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "_Layout.cshtml.css",
-              "DocumentMoniker": "C:\\Users\\amila\\OneDrive - TEC\\Documents\\GitHub\\BlogWebsideEksamensprojektProgrammering\\MVCVideoGuide\\MVCVideoGuide\\Views\\Shared\\_Layout.cshtml.css",
-              "RelativeDocumentMoniker": "MVCVideoGuide\\Views\\Shared\\_Layout.cshtml.css",
-              "ToolTip": "C:\\Users\\amila\\OneDrive - TEC\\Documents\\GitHub\\BlogWebsideEksamensprojektProgrammering\\MVCVideoGuide\\MVCVideoGuide\\Views\\Shared\\_Layout.cshtml.css",
-              "RelativeToolTip": "MVCVideoGuide\\Views\\Shared\\_Layout.cshtml.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-01-17T07:26:12.188Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AddProduct.cshtml",
-              "DocumentMoniker": "C:\\Users\\amila\\OneDrive - TEC\\Documents\\GitHub\\BlogWebsideEksamensprojektProgrammering\\MVCVideoGuide\\MVCVideoGuide\\Views\\Home\\AddProduct.cshtml",
-              "RelativeDocumentMoniker": "MVCVideoGuide\\Views\\Home\\AddProduct.cshtml",
-              "ToolTip": "C:\\Users\\amila\\OneDrive - TEC\\Documents\\GitHub\\BlogWebsideEksamensprojektProgrammering\\MVCVideoGuide\\MVCVideoGuide\\Views\\Home\\AddProduct.cshtml",
-              "RelativeToolTip": "MVCVideoGuide\\Views\\Home\\AddProduct.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-13T10:27:00.316Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "fetchAPI.js",
-              "DocumentMoniker": "C:\\Users\\amila\\OneDrive - TEC\\Documents\\GitHub\\BlogWebsideEksamensprojektProgrammering\\MVCVideoGuide\\MVCVideoGuide\\wwwroot\\js\\fetchAPI.js",
-              "RelativeDocumentMoniker": "MVCVideoGuide\\wwwroot\\js\\fetchAPI.js",
-              "ToolTip": "C:\\Users\\amila\\OneDrive - TEC\\Documents\\GitHub\\BlogWebsideEksamensprojektProgrammering\\MVCVideoGuide\\MVCVideoGuide\\wwwroot\\js\\fetchAPI.js",
-              "RelativeToolTip": "MVCVideoGuide\\wwwroot\\js\\fetchAPI.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-01-17T07:41:50.509Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Error.cshtml",
-              "DocumentMoniker": "C:\\Users\\amila\\OneDrive - TEC\\Documents\\GitHub\\BlogWebsideEksamensprojektProgrammering\\MVCVideoGuide\\MVCVideoGuide\\Views\\Shared\\Error.cshtml",
-              "RelativeDocumentMoniker": "MVCVideoGuide\\Views\\Shared\\Error.cshtml",
-              "ToolTip": "C:\\Users\\amila\\OneDrive - TEC\\Documents\\GitHub\\BlogWebsideEksamensprojektProgrammering\\MVCVideoGuide\\MVCVideoGuide\\Views\\Shared\\Error.cshtml",
-              "RelativeToolTip": "MVCVideoGuide\\Views\\Shared\\Error.cshtml",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-12T23:26:17.6Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "_ViewImports.cshtml",
-              "DocumentMoniker": "C:\\Users\\amila\\OneDrive - TEC\\Documents\\GitHub\\BlogWebsideEksamensprojektProgrammering\\MVCVideoGuide\\MVCVideoGuide\\Views\\_ViewImports.cshtml",
-              "RelativeDocumentMoniker": "MVCVideoGuide\\Views\\_ViewImports.cshtml",
-              "ToolTip": "C:\\Users\\amila\\OneDrive - TEC\\Documents\\GitHub\\BlogWebsideEksamensprojektProgrammering\\MVCVideoGuide\\MVCVideoGuide\\Views\\_ViewImports.cshtml",
-              "RelativeToolTip": "MVCVideoGuide\\Views\\_ViewImports.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-12T23:25:07.906Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "_ViewStart.cshtml",
-              "DocumentMoniker": "C:\\Users\\amila\\OneDrive - TEC\\Documents\\GitHub\\BlogWebsideEksamensprojektProgrammering\\MVCVideoGuide\\MVCVideoGuide\\Views\\_ViewStart.cshtml",
-              "RelativeDocumentMoniker": "MVCVideoGuide\\Views\\_ViewStart.cshtml",
-              "ToolTip": "C:\\Users\\amila\\OneDrive - TEC\\Documents\\GitHub\\BlogWebsideEksamensprojektProgrammering\\MVCVideoGuide\\MVCVideoGuide\\Views\\_ViewStart.cshtml",
-              "RelativeToolTip": "MVCVideoGuide\\Views\\_ViewStart.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-12T23:25:13.131Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\amila\\OneDrive - TEC\\Documents\\GitHub\\BlogWebsideEksamensprojektProgrammering\\MVCVideoGuide\\MVCVideoGuide\\Program.cs",
-              "RelativeDocumentMoniker": "MVCVideoGuide\\Program.cs",
-              "ToolTip": "C:\\Users\\amila\\OneDrive - TEC\\Documents\\GitHub\\BlogWebsideEksamensprojektProgrammering\\MVCVideoGuide\\MVCVideoGuide\\Program.cs",
-              "RelativeToolTip": "MVCVideoGuide\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-12T23:25:16.162Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Privacy.cshtml",
-              "DocumentMoniker": "C:\\Users\\amila\\OneDrive - TEC\\Documents\\GitHub\\BlogWebsideEksamensprojektProgrammering\\MVCVideoGuide\\MVCVideoGuide\\Views\\Home\\Privacy.cshtml",
-              "RelativeDocumentMoniker": "MVCVideoGuide\\Views\\Home\\Privacy.cshtml",
-              "ToolTip": "C:\\Users\\amila\\OneDrive - TEC\\Documents\\GitHub\\BlogWebsideEksamensprojektProgrammering\\MVCVideoGuide\\MVCVideoGuide\\Views\\Home\\Privacy.cshtml",
-              "RelativeToolTip": "MVCVideoGuide\\Views\\Home\\Privacy.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-12T23:25:33.551Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "VideoDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\amila\\OneDrive - TEC\\Documents\\GitHub\\BlogWebsideEksamensprojektProgrammering\\MVCVideoGuide\\MVCVideoGuide\\Data\\VideoDbContext.cs",
-              "RelativeDocumentMoniker": "MVCVideoGuide\\Data\\VideoDbContext.cs",
-              "ToolTip": "C:\\Users\\amila\\OneDrive - TEC\\Documents\\GitHub\\BlogWebsideEksamensprojektProgrammering\\MVCVideoGuide\\MVCVideoGuide\\Data\\VideoDbContext.cs",
-              "RelativeToolTip": "MVCVideoGuide\\Data\\VideoDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-12T23:42:42.06Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\amila\\OneDrive - TEC\\Documents\\GitHub\\BlogWebsideEksamensprojektProgrammering\\MVCVideoGuide\\MVCVideoGuide\\appsettings.json",
-              "RelativeDocumentMoniker": "MVCVideoGuide\\appsettings.json",
-              "ToolTip": "C:\\Users\\amila\\OneDrive - TEC\\Documents\\GitHub\\BlogWebsideEksamensprojektProgrammering\\MVCVideoGuide\\MVCVideoGuide\\appsettings.json",
-              "RelativeToolTip": "MVCVideoGuide\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-01-12T23:46:15.666Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "ShowProducts.cshtml",
-              "DocumentMoniker": "C:\\Users\\amila\\OneDrive - TEC\\Documents\\GitHub\\BlogWebsideEksamensprojektProgrammering\\MVCVideoGuide\\MVCVideoGuide\\Views\\Home\\ShowProducts.cshtml",
-              "RelativeDocumentMoniker": "MVCVideoGuide\\Views\\Home\\ShowProducts.cshtml",
-              "ToolTip": "C:\\Users\\amila\\OneDrive - TEC\\Documents\\GitHub\\BlogWebsideEksamensprojektProgrammering\\MVCVideoGuide\\MVCVideoGuide\\Views\\Home\\ShowProducts.cshtml",
-              "RelativeToolTip": "MVCVideoGuide\\Views\\Home\\ShowProducts.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-13T00:46:17.73Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "appsettings.Development.json",
-              "DocumentMoniker": "C:\\Users\\amila\\OneDrive - TEC\\Documents\\GitHub\\BlogWebsideEksamensprojektProgrammering\\MVCVideoGuide\\MVCVideoGuide\\appsettings.Development.json",
-              "RelativeDocumentMoniker": "MVCVideoGuide\\appsettings.Development.json",
-              "ToolTip": "C:\\Users\\amila\\OneDrive - TEC\\Documents\\GitHub\\BlogWebsideEksamensprojektProgrammering\\MVCVideoGuide\\MVCVideoGuide\\appsettings.Development.json",
-              "RelativeToolTip": "MVCVideoGuide\\appsettings.Development.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-01-13T01:05:35.739Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "Blogs.cs",
-              "DocumentMoniker": "C:\\Users\\amila\\OneDrive - TEC\\Documents\\GitHub\\BlogWebsideEksamensprojektProgrammering\\MVCVideoGuide\\MVCVideoGuide\\Data\\Entities\\Blogs.cs",
-              "RelativeDocumentMoniker": "MVCVideoGuide\\Data\\Entities\\Blogs.cs",
-              "ToolTip": "C:\\Users\\amila\\OneDrive - TEC\\Documents\\GitHub\\BlogWebsideEksamensprojektProgrammering\\MVCVideoGuide\\MVCVideoGuide\\Data\\Entities\\Blogs.cs",
-              "RelativeToolTip": "MVCVideoGuide\\Data\\Entities\\Blogs.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-13T10:04:12.987Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Comments.cs",
-              "DocumentMoniker": "C:\\Users\\amila\\OneDrive - TEC\\Documents\\GitHub\\BlogWebsideEksamensprojektProgrammering\\MVCVideoGuide\\MVCVideoGuide\\Data\\Entities\\Comments.cs",
-              "RelativeDocumentMoniker": "MVCVideoGuide\\Data\\Entities\\Comments.cs",
-              "ToolTip": "C:\\Users\\amila\\OneDrive - TEC\\Documents\\GitHub\\BlogWebsideEksamensprojektProgrammering\\MVCVideoGuide\\MVCVideoGuide\\Data\\Entities\\Comments.cs",
-              "RelativeToolTip": "MVCVideoGuide\\Data\\Entities\\Comments.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-13T10:05:54.344Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "Order.cs",
-              "DocumentMoniker": "C:\\Users\\amila\\OneDrive - TEC\\Documents\\GitHub\\BlogWebsideEksamensprojektProgrammering\\MVCVideoGuide\\MVCVideoGuide\\Data\\Entities\\Order.cs",
-              "RelativeDocumentMoniker": "MVCVideoGuide\\Data\\Entities\\Order.cs",
-              "ToolTip": "C:\\Users\\amila\\OneDrive - TEC\\Documents\\GitHub\\BlogWebsideEksamensprojektProgrammering\\MVCVideoGuide\\MVCVideoGuide\\Data\\Entities\\Order.cs",
-              "RelativeToolTip": "MVCVideoGuide\\Data\\Entities\\Order.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-12T23:42:26.098Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "VideoDbContextModelSnapshot.cs",
-              "DocumentMoniker": "C:\\Users\\amila\\OneDrive - TEC\\Documents\\GitHub\\BlogWebsideEksamensprojektProgrammering\\MVCVideoGuide\\MVCVideoGuide\\Migrations\\VideoDbContextModelSnapshot.cs",
-              "RelativeDocumentMoniker": "MVCVideoGuide\\Migrations\\VideoDbContextModelSnapshot.cs",
-              "ToolTip": "C:\\Users\\amila\\OneDrive - TEC\\Documents\\GitHub\\BlogWebsideEksamensprojektProgrammering\\MVCVideoGuide\\MVCVideoGuide\\Migrations\\VideoDbContextModelSnapshot.cs",
-              "RelativeToolTip": "MVCVideoGuide\\Migrations\\VideoDbContextModelSnapshot.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-13T01:25:09.695Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "Product.cs",
-              "DocumentMoniker": "C:\\Users\\amila\\OneDrive - TEC\\Documents\\GitHub\\BlogWebsideEksamensprojektProgrammering\\MVCVideoGuide\\MVCVideoGuide\\Data\\Entities\\Product.cs",
-              "RelativeDocumentMoniker": "MVCVideoGuide\\Data\\Entities\\Product.cs",
-              "ToolTip": "C:\\Users\\amila\\OneDrive - TEC\\Documents\\GitHub\\BlogWebsideEksamensprojektProgrammering\\MVCVideoGuide\\MVCVideoGuide\\Data\\Entities\\Product.cs",
-              "RelativeToolTip": "MVCVideoGuide\\Data\\Entities\\Product.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-12T23:41:25.277Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "_ValidationScriptsPartial.cshtml",
-              "DocumentMoniker": "C:\\Users\\amila\\OneDrive - TEC\\Documents\\GitHub\\BlogWebsideEksamensprojektProgrammering\\MVCVideoGuide\\MVCVideoGuide\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "RelativeDocumentMoniker": "MVCVideoGuide\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "ToolTip": "C:\\Users\\amila\\OneDrive - TEC\\Documents\\GitHub\\BlogWebsideEksamensprojektProgrammering\\MVCVideoGuide\\MVCVideoGuide\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "RelativeToolTip": "MVCVideoGuide\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-12T23:26:20.25Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "dbo.Products.sql",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/master/True/SqlTable/dbo.Products.sql",
-              "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/master/True/SqlTable/dbo.Products.sql",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-01-13T00:41:56.877Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "C:\\Users\\amila\\OneDrive - TEC\\Documents\\GitHub\\BlogWebsideEksamensprojektProgrammering\\MVCVideoGuide\\MVCVideoGuide\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "MVCVideoGuide\\Properties\\launchSettings.json",
-              "ToolTip": "C:\\Users\\amila\\OneDrive - TEC\\Documents\\GitHub\\BlogWebsideEksamensprojektProgrammering\\MVCVideoGuide\\MVCVideoGuide\\Properties\\launchSettings.json",
-              "RelativeToolTip": "MVCVideoGuide\\Properties\\launchSettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-01-13T01:05:14.991Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "MVCVideoGuide",
-              "DocumentMoniker": "C:\\Users\\amila\\OneDrive - TEC\\Documents\\GitHub\\BlogWebsideEksamensprojektProgrammering\\MVCVideoGuide\\MVCVideoGuide\\MVCVideoGuide.csproj",
-              "RelativeDocumentMoniker": "MVCVideoGuide\\MVCVideoGuide.csproj",
-              "ToolTip": "C:\\Users\\amila\\OneDrive - TEC\\Documents\\GitHub\\BlogWebsideEksamensprojektProgrammering\\MVCVideoGuide\\MVCVideoGuide\\MVCVideoGuide.csproj",
-              "RelativeToolTip": "MVCVideoGuide\\MVCVideoGuide.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-01-12T23:24:16.64Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "20250113003119_VideoDb.cs",
-              "DocumentMoniker": "C:\\Users\\amila\\OneDrive - TEC\\Documents\\GitHub\\BlogWebsideEksamensprojektProgrammering\\MVCVideoGuide\\MVCVideoGuide\\Migrations\\20250113003119_VideoDb.cs",
-              "RelativeDocumentMoniker": "MVCVideoGuide\\Migrations\\20250113003119_VideoDb.cs",
-              "ToolTip": "C:\\Users\\amila\\OneDrive - TEC\\Documents\\GitHub\\BlogWebsideEksamensprojektProgrammering\\MVCVideoGuide\\MVCVideoGuide\\Migrations\\20250113003119_VideoDb.cs",
-              "RelativeToolTip": "MVCVideoGuide\\Migrations\\20250113003119_VideoDb.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-13T00:32:10.152Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "About.cshtml",
-              "DocumentMoniker": "C:\\Users\\amila\\OneDrive - TEC\\Documents\\GitHub\\BlogWebsideEksamensprojektProgrammering\\MVCVideoGuide\\MVCVideoGuide\\Views\\Home\\About.cshtml",
-              "RelativeDocumentMoniker": "MVCVideoGuide\\Views\\Home\\About.cshtml",
-              "ToolTip": "C:\\Users\\amila\\OneDrive - TEC\\Documents\\GitHub\\BlogWebsideEksamensprojektProgrammering\\MVCVideoGuide\\MVCVideoGuide\\Views\\Home\\About.cshtml",
-              "RelativeToolTip": "MVCVideoGuide\\Views\\Home\\About.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-12T23:18:22.638Z"
             }
           ]
         }

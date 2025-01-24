@@ -38,7 +38,7 @@ namespace MVCVideoGuide.Controllers
         {
             return View();
         }
-        public IActionResult ShowBlogs()
+        public IActionResult SeeBlogs()
         {
             List<Blog> result = _context.Blogs.OrderBy(p => p.Title).ToList();
             return View(result);
@@ -53,6 +53,8 @@ namespace MVCVideoGuide.Controllers
         [HttpPost]
         public IActionResult WriteBlog(Blog blog_instance)
         {
+            blog_instance.CreatedDate = DateTime.Now;
+            blog_instance.LikeCount = 0;
             _context.Blogs.Add(blog_instance);
             _context.SaveChanges();
             return View();

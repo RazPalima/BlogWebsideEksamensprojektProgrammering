@@ -1,0 +1,14 @@
+﻿@model List<Blog>
+@{
+    ViewData["Title"] = "See Blogs";
+}
+<h1>@ViewData["Title"]</h1>
+<p>Here are all the blog (Number of blogs: @Model.Count)</p>
+<ul>
+    @foreach(Blog blog_instance in Model)
+    {
+        <li>
+            <p>@blog_instance.Title  @blog_instance.BlogText</p>
+        </li>
+    }
+</ul>

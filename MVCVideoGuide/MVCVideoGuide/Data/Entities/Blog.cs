@@ -1,8 +1,11 @@
-﻿namespace MVCVideoGuide.Data.Entities
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace MVCVideoGuide.Data.Entities
 {
     public class Blog
     {
         public int Id { get; set; }
+        //[DataType(DataType.Date)]
         public DateTime CreatedDate { get; set; }
         public string User { get; set; }
         public string Title { get; set; }
