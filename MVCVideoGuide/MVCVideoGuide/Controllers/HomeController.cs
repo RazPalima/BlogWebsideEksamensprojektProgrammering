@@ -40,6 +40,7 @@ namespace MVCVideoGuide.Controllers
         }
         public IActionResult SeeBlogs()
         {
+
             List<Blog> result = _context.Blogs.OrderBy(p => p.Title).ToList();
             return View(result);
 

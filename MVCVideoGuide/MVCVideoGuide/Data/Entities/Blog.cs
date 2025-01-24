@@ -11,6 +11,5 @@ namespace MVCVideoGuide.Data.Entities
         public string Title { get; set; }
         public string BlogText { get; set; }
         public int LikeCount { get; set; }
-        public Comment? Comment { get; set; }
     }
 }

@@ -278,4 +278,3 @@ C:\Users\amila\OneDrive - TEC\Documents\GitHub\BlogWebsideEksamensprojektProgram
 C:\Users\amila\OneDrive - TEC\Documents\GitHub\BlogWebsideEksamensprojektProgrammering\MVCVideoGuide\MVCVideoGuide\obj\Debug\net8.0\MVCVideoGuide.pdb
 C:\Users\amila\OneDrive - TEC\Documents\GitHub\BlogWebsideEksamensprojektProgrammering\MVCVideoGuide\MVCVideoGuide\obj\Debug\net8.0\MVCVideoGuide.genruntimeconfig.cache
 C:\Users\amila\OneDrive - TEC\Documents\GitHub\BlogWebsideEksamensprojektProgrammering\MVCVideoGuide\MVCVideoGuide\obj\Debug\net8.0\ref\MVCVideoGuide.dll
-C:\Users\amila\OneDrive - TEC\Documents\GitHub\BlogWebsideEksamensprojektProgrammering\MVCVideoGuide\MVCVideoGuide\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
