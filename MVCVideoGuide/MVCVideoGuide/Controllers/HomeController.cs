@@ -54,12 +54,14 @@ namespace MVCVideoGuide.Controllers
         public IActionResult SeeCategories()
         {
             // Get distinct categories using LINQ
+
+
+
             List<string> values = _context.Blogs
                                           .Select(p => p.Category)
                                           .Distinct()
                                           .OrderBy(category => category)
                                           .ToList();
-            //List<Blog> result = _context.Blogs.OrderBy(p => p.Values).ToList();
             return View(values);
         }
        
