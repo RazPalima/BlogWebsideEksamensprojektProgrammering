@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MVCVideoGuide")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4e3c92936233b3654d24abac08931cd9765da26e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5bc28aba18e5f68ce94f1ca09becb722b293c83d")]
 [assembly: System.Reflection.AssemblyProductAttribute("MVCVideoGuide")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MVCVideoGuide")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -55,8 +55,8 @@
               "Title": "SeeBlogs.cshtml",
               "DocumentMoniker": "C:\\Users\\david\\Documents\\GitHub\\BlogWebsideEksamensprojektProgrammering\\MVCVideoGuide\\MVCVideoGuide\\Views\\Home\\SeeBlogs.cshtml",
               "RelativeDocumentMoniker": "MVCVideoGuide\\Views\\Home\\SeeBlogs.cshtml",
-              "ToolTip": "C:\\Users\\david\\Documents\\GitHub\\BlogWebsideEksamensprojektProgrammering\\MVCVideoGuide\\MVCVideoGuide\\Views\\Home\\SeeBlogs.cshtml*",
-              "RelativeToolTip": "MVCVideoGuide\\Views\\Home\\SeeBlogs.cshtml*",
+              "ToolTip": "C:\\Users\\david\\Documents\\GitHub\\BlogWebsideEksamensprojektProgrammering\\MVCVideoGuide\\MVCVideoGuide\\Views\\Home\\SeeBlogs.cshtml",
+              "RelativeToolTip": "MVCVideoGuide\\Views\\Home\\SeeBlogs.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-01-24T11:12:13.972Z",
@@ -112,12 +112,11 @@
               "Title": "SeeBlogsDate.cshtml",
               "DocumentMoniker": "C:\\Users\\david\\Documents\\GitHub\\BlogWebsideEksamensprojektProgrammering\\MVCVideoGuide\\MVCVideoGuide\\Views\\Home\\SeeBlogsDate.cshtml",
               "RelativeDocumentMoniker": "MVCVideoGuide\\Views\\Home\\SeeBlogsDate.cshtml",
-              "ToolTip": "C:\\Users\\david\\Documents\\GitHub\\BlogWebsideEksamensprojektProgrammering\\MVCVideoGuide\\MVCVideoGuide\\Views\\Home\\SeeBlogsDate.cshtml*",
-              "RelativeToolTip": "MVCVideoGuide\\Views\\Home\\SeeBlogsDate.cshtml*",
+              "ToolTip": "C:\\Users\\david\\Documents\\GitHub\\BlogWebsideEksamensprojektProgrammering\\MVCVideoGuide\\MVCVideoGuide\\Views\\Home\\SeeBlogsDate.cshtml",
+              "RelativeToolTip": "MVCVideoGuide\\Views\\Home\\SeeBlogsDate.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-24T12:03:39.097Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-24T12:03:39.097Z"
             }
           ]
         }
