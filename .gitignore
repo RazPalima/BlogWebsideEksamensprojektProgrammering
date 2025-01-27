@@ -1,17 +1,19 @@
 # Build results
-bin/
-obj/
+MVCVideoGuide/MVCVideoGuide/bin/
+MVCVideoGuide/MVCVideoGuide/obj/
 
 # User-specific files
-.vscode/
+MVCVideoGuide/MVCVideoGuide/.vscode/
 .vs/
-*.user
-*.suo
+MVCVideoGuide/MVCVideoGuide/.vs/
+MVCVideoGuide/MVCVideoGuide/*.user
+MVCVideoGuide/MVCVideoGuide/*.suo
 
 # Log files
-*.log
+MVCVideoGuide/MVCVideoGuide/*.log
 
 # IIS Express local server configuration
+MVCVideoGuide/MVCVideoGuide/.vs/
 /.vs/
 /*.config
 /App_Data/
@@ -22,14 +24,14 @@ obj/
 /Packages/
 
 # Environment files
-.env
+MVCVideoGuide/MVCVideoGuide/.env
 
 # JetBrains Rider settings
-.idea/
+MVCVideoGuide/MVCVideoGuide/.idea/
 
 # Dependency cache
 node_modules/
-wwwroot/lib/
+MVCVideoGuide/MVCVideoGuide/wwwroot/lib/
 
 # Temporary files
 *.tmp
