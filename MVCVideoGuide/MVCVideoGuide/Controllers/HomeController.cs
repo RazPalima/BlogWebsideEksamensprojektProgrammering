@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -52,10 +53,36 @@ namespace MVCVideoGuide.Controllers
         }
         public IActionResult SeeCategories()
         {
-            List<Blog> result = _context.Blogs.OrderBy(p => p.Category).ToList();
-            return View(result);
+            // Get distinct categories using LINQ
+            List<string> values = _context.Blogs
+                                          .Select(p => p.Category)
+                                          .Distinct()
+                                          .OrderBy(category => category)
+                                          .ToList();
 
+            return View(values);
         }
+        /*public IActionResult SeeCategories()
+        {
+            List<Blog> result = _context.Blogs.OrderBy(p => p.Category).ToList();
+            //List<Blog> noDupes = result.Distinct().ToList();
+            //var noDupes = new HashSet<Blog>(result).ToList();
+            //var values = new HashSet<Blog>(result).ToList();
+            List<string> values = new List<string>();
+            /*foreach (var item in result)
+            {
+                if (values.Contains(item.Category) == false)
+                {
+                    values.Add(item.Category);
+                }
+            }
+            return View(values);*/
+            
+
+
+
+       // }
+
         [HttpGet]
         public IActionResult WriteBlog()
         {
