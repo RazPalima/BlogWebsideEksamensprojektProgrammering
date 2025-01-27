@@ -1,4 +1,4 @@
-﻿@model List<Blog>
+﻿@model List<string>
 @{
     ViewData["Title"] = "See Blogs";
 }
@@ -7,10 +7,10 @@
 <p> <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="SeeBlogsDate">See Date</a> </p>
 
 <ul>
-    @foreach(Blog blog_instance in Model)
+    @foreach(string blog_instance in Model)
     {
         <li>
-            <p>@blog_instance.Category </p>
+            <p>@blog_instance </p>
         </li>
     }
 </ul>

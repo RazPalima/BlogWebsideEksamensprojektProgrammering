@@ -59,29 +59,10 @@ namespace MVCVideoGuide.Controllers
                                           .Distinct()
                                           .OrderBy(category => category)
                                           .ToList();
-
+            //List<Blog> result = _context.Blogs.OrderBy(p => p.Values).ToList();
             return View(values);
         }
-        /*public IActionResult SeeCategories()
-        {
-            List<Blog> result = _context.Blogs.OrderBy(p => p.Category).ToList();
-            //List<Blog> noDupes = result.Distinct().ToList();
-            //var noDupes = new HashSet<Blog>(result).ToList();
-            //var values = new HashSet<Blog>(result).ToList();
-            List<string> values = new List<string>();
-            /*foreach (var item in result)
-            {
-                if (values.Contains(item.Category) == false)
-                {
-                    values.Add(item.Category);
-                }
-            }
-            return View(values);*/
-            
-
-
-
-       // }
+       
 
         [HttpGet]
         public IActionResult WriteBlog()
