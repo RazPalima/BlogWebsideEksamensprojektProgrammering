@@ -7,24 +7,24 @@
       "RelativeMoniker": "D:0:0:{4E9D5642-4634-4465-ADF8-C45ACC74785F}|MVCVideoGuide\\MVCVideoGuide.csproj|solutionrelative:mvcvideoguide\\views\\home\\writeblog.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4E9D5642-4634-4465-ADF8-C45ACC74785F}|MVCVideoGuide\\MVCVideoGuide.csproj|c:\\users\\david\\documents\\github\\blogwebsideeksamensprojektprogrammering\\mvcvideoguide\\mvcvideoguide\\views\\home\\seeblogs.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4E9D5642-4634-4465-ADF8-C45ACC74785F}|MVCVideoGuide\\MVCVideoGuide.csproj|solutionrelative:mvcvideoguide\\views\\home\\seeblogs.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4E9D5642-4634-4465-ADF8-C45ACC74785F}|MVCVideoGuide\\MVCVideoGuide.csproj|c:\\users\\david\\documents\\github\\blogwebsideeksamensprojektprogrammering\\mvcvideoguide\\mvcvideoguide\\views\\home\\seeblogsdate.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{4E9D5642-4634-4465-ADF8-C45ACC74785F}|MVCVideoGuide\\MVCVideoGuide.csproj|solutionrelative:mvcvideoguide\\views\\home\\seeblogsdate.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E9D5642-4634-4465-ADF8-C45ACC74785F}|MVCVideoGuide\\MVCVideoGuide.csproj|c:\\users\\david\\documents\\github\\blogwebsideeksamensprojektprogrammering\\mvcvideoguide\\mvcvideoguide\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4E9D5642-4634-4465-ADF8-C45ACC74785F}|MVCVideoGuide\\MVCVideoGuide.csproj|solutionrelative:mvcvideoguide\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4E9D5642-4634-4465-ADF8-C45ACC74785F}|MVCVideoGuide\\MVCVideoGuide.csproj|c:\\users\\david\\documents\\github\\blogwebsideeksamensprojektprogrammering\\mvcvideoguide\\mvcvideoguide\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4E9D5642-4634-4465-ADF8-C45ACC74785F}|MVCVideoGuide\\MVCVideoGuide.csproj|solutionrelative:mvcvideoguide\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{4E9D5642-4634-4465-ADF8-C45ACC74785F}|MVCVideoGuide\\MVCVideoGuide.csproj|c:\\users\\david\\documents\\github\\blogwebsideeksamensprojektprogrammering\\mvcvideoguide\\mvcvideoguide\\views\\home\\seeblogs.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4E9D5642-4634-4465-ADF8-C45ACC74785F}|MVCVideoGuide\\MVCVideoGuide.csproj|solutionrelative:mvcvideoguide\\views\\home\\seeblogs.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4E9D5642-4634-4465-ADF8-C45ACC74785F}|MVCVideoGuide\\MVCVideoGuide.csproj|c:\\users\\david\\documents\\github\\blogwebsideeksamensprojektprogrammering\\mvcvideoguide\\mvcvideoguide\\data\\entities\\blog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4E9D5642-4634-4465-ADF8-C45ACC74785F}|MVCVideoGuide\\MVCVideoGuide.csproj|solutionrelative:mvcvideoguide\\data\\entities\\blog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E9D5642-4634-4465-ADF8-C45ACC74785F}|MVCVideoGuide\\MVCVideoGuide.csproj|c:\\users\\david\\documents\\github\\blogwebsideeksamensprojektprogrammering\\mvcvideoguide\\mvcvideoguide\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4E9D5642-4634-4465-ADF8-C45ACC74785F}|MVCVideoGuide\\MVCVideoGuide.csproj|solutionrelative:mvcvideoguide\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,30 +38,30 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\david\\Documents\\GitHub\\BlogWebsideEksamensprojektProgrammering\\MVCVideoGuide\\MVCVideoGuide\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "MVCVideoGuide\\Controllers\\HomeController.cs",
               "ToolTip": "C:\\Users\\david\\Documents\\GitHub\\BlogWebsideEksamensprojektProgrammering\\MVCVideoGuide\\MVCVideoGuide\\Controllers\\HomeController.cs",
               "RelativeToolTip": "MVCVideoGuide\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAYwDMAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAACoAAAAAAAAAAAApwEAAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-24T11:14:03.897Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "SeeBlogs.cshtml",
               "DocumentMoniker": "C:\\Users\\david\\Documents\\GitHub\\BlogWebsideEksamensprojektProgrammering\\MVCVideoGuide\\MVCVideoGuide\\Views\\Home\\SeeBlogs.cshtml",
               "RelativeDocumentMoniker": "MVCVideoGuide\\Views\\Home\\SeeBlogs.cshtml",
               "ToolTip": "C:\\Users\\david\\Documents\\GitHub\\BlogWebsideEksamensprojektProgrammering\\MVCVideoGuide\\MVCVideoGuide\\Views\\Home\\SeeBlogs.cshtml",
               "RelativeToolTip": "MVCVideoGuide\\Views\\Home\\SeeBlogs.cshtml",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAQwBIAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAQwBQAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-01-24T11:12:13.972Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -69,9 +69,9 @@
               "Title": "WriteBlog.cshtml",
               "DocumentMoniker": "C:\\Users\\david\\Documents\\GitHub\\BlogWebsideEksamensprojektProgrammering\\MVCVideoGuide\\MVCVideoGuide\\Views\\Home\\WriteBlog.cshtml",
               "RelativeDocumentMoniker": "MVCVideoGuide\\Views\\Home\\WriteBlog.cshtml",
-              "ToolTip": "C:\\Users\\david\\Documents\\GitHub\\BlogWebsideEksamensprojektProgrammering\\MVCVideoGuide\\MVCVideoGuide\\Views\\Home\\WriteBlog.cshtml*",
-              "RelativeToolTip": "MVCVideoGuide\\Views\\Home\\WriteBlog.cshtml*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAHAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\david\\Documents\\GitHub\\BlogWebsideEksamensprojektProgrammering\\MVCVideoGuide\\MVCVideoGuide\\Views\\Home\\WriteBlog.cshtml",
+              "RelativeToolTip": "MVCVideoGuide\\Views\\Home\\WriteBlog.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-01-24T11:12:12.377Z",
               "IsPinned": true,
@@ -79,20 +79,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "Blog.cs",
               "DocumentMoniker": "C:\\Users\\david\\Documents\\GitHub\\BlogWebsideEksamensprojektProgrammering\\MVCVideoGuide\\MVCVideoGuide\\Data\\Entities\\Blog.cs",
               "RelativeDocumentMoniker": "MVCVideoGuide\\Data\\Entities\\Blog.cs",
               "ToolTip": "C:\\Users\\david\\Documents\\GitHub\\BlogWebsideEksamensprojektProgrammering\\MVCVideoGuide\\MVCVideoGuide\\Data\\Entities\\Blog.cs",
               "RelativeToolTip": "MVCVideoGuide\\Data\\Entities\\Blog.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAxAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-24T11:13:57.104Z",
               "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\david\\Documents\\GitHub\\BlogWebsideEksamensprojektProgrammering\\MVCVideoGuide\\MVCVideoGuide\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "MVCVideoGuide\\Views\\Shared\\_Layout.cshtml",
@@ -109,7 +109,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "SeeBlogsDate.cshtml",
               "DocumentMoniker": "C:\\Users\\david\\Documents\\GitHub\\BlogWebsideEksamensprojektProgrammering\\MVCVideoGuide\\MVCVideoGuide\\Views\\Home\\SeeBlogsDate.cshtml",
               "RelativeDocumentMoniker": "MVCVideoGuide\\Views\\Home\\SeeBlogsDate.cshtml",
@@ -117,7 +117,8 @@
               "RelativeToolTip": "MVCVideoGuide\\Views\\Home\\SeeBlogsDate.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-24T12:03:39.097Z"
+              "WhenOpened": "2025-01-24T12:03:39.097Z",
+              "EditorCaption": ""
             }
           ]
         }
