@@ -3,9 +3,8 @@ MVCVideoGuide/MVCVideoGuide/bin/
 MVCVideoGuide/MVCVideoGuide/obj/
 
 # User-specific files
-MVCVideoGuide/MVCVideoGuide/.vscode/
+MVCVideoGuide/.vs/
 .vs/
-MVCVideoGuide/MVCVideoGuide/.vs/
 MVCVideoGuide/MVCVideoGuide/*.user
 MVCVideoGuide/MVCVideoGuide/*.suo
 
