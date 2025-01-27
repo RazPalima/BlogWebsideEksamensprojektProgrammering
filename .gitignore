@@ -1,34 +1,37 @@
+# Build results
+bin/
+obj/
 
-/MVCVideoGuide/.vs
-MVCVideoGuide/MVCVideoGuide/obj/Debug/net8.0/MVCVideoGuide.AssemblyInfo.cs
-MVCVideoGuide/MVCVideoGuide/obj/Debug/net8.0/MVCVideoGuide.AssemblyInfoInputs.cache
-MVCVideoGuide/MVCVideoGuide/obj/Debug/net8.0/MVCVideoGuide.assets.cache
-MVCVideoGuide/MVCVideoGuide/obj/Debug/net8.0/MVCVideoGuide.csproj.AssemblyReference.cache
-MVCVideoGuide/MVCVideoGuide/obj/Debug/net8.0/MVCVideoGuide.csproj.CoreCompileInputs.cache
-MVCVideoGuide/MVCVideoGuide/obj/Debug/net8.0/MVCVideoGuide.dll
-MVCVideoGuide/MVCVideoGuide/obj/Debug/net8.0/MVCVideoGuide.GeneratedMSBuildEditorConfig.editorconfig
-MVCVideoGuide/MVCVideoGuide/obj/Debug/net8.0/MVCVideoGuide.genruntimeconfig.cache
-MVCVideoGuide/MVCVideoGuide/obj/Debug/net8.0/MVCVideoGuide.pdb
-MVCVideoGuide/MVCVideoGuide/obj/Debug/net8.0/MVCVideoGuide.sourcelink.json
-MVCVideoGuide/MVCVideoGuide/obj/Debug/net8.0/ref/MVCVideoGuide.dll
-MVCVideoGuide/MVCVideoGuide/obj/Debug/net8.0/refint/MVCVideoGuide.dll
-MVCVideoGuide/MVCVideoGuide/obj/Debug/net8.0/staticwebassets.build.json
-MVCVideoGuide/MVCVideoGuide/obj/Debug/net8.0/staticwebassets.development.json
-MVCVideoGuide/MVCVideoGuide/obj/Debug/net8.0/staticwebassets.pack.json
-MVCVideoGuide/MVCVideoGuide/obj/Debug/net8.0/staticwebassets/msbuild.build.MVCVideoGuide.props
-MVCVideoGuide/MVCVideoGuide/obj/Debug/net8.0/staticwebassets/msbuild.MVCVideoGuide.Microsoft.AspNetCore.StaticWebAssets.props
-MVCVideoGuide/MVCVideoGuide/obj/MVCVideoGuide.csproj.nuget.dgspec.json
-MVCVideoGuide/MVCVideoGuide/obj/MVCVideoGuide.csproj.nuget.g.props
-MVCVideoGuide/MVCVideoGuide/obj/project.assets.json
-MVCVideoGuide/MVCVideoGuide/obj/project.nuget.cache
-MVCVideoGuide/MVCVideoGuide/obj/Debug/net8.0/MVCVideoGuide.AssemblyInfo.cs
-MVCVideoGuide/MVCVideoGuide/obj/Debug/net8.0/apphost.exe
-MVCVideoGuide/MVCVideoGuide/bin/Debug/net8.0/MVCVideoGuide.staticwebassets.runtime.json
-MVCVideoGuide/MVCVideoGuide/bin/Debug/net8.0/MVCVideoGuide.pdb
-MVCVideoGuide/MVCVideoGuide/bin/Debug/net8.0/MVCVideoGuide.exe
-MVCVideoGuide/MVCVideoGuide/bin/Debug/net8.0/MVCVideoGuide.dll
-MVCVideoGuide/.vs/MVCVideoGuide/v17/DocumentLayout.json
-MVCVideoGuide/.vs/MVCVideoGuide/v17/DocumentLayout.backup.json
-MVCVideoGuide/.vs/MVCVideoGuide/v17/.suo
-MVCVideoGuide/.vs/MVCVideoGuide/v17/.futdcache.v2
-MVCVideoGuide/.vs/MVCVideoGuide/DesignTimeBuild/.dtbcache.v2
+# User-specific files
+.vscode/
+.vs/
+*.user
+*.suo
+
+# Log files
+*.log
+
+# IIS Express local server configuration
+/.vs/
+/*.config
+/App_Data/
+
+# Packages
+*.nupkg
+*.snupkg
+/Packages/
+
+# Environment files
+.env
+
+# JetBrains Rider settings
+.idea/
+
+# Dependency cache
+node_modules/
+wwwroot/lib/
+
+# Temporary files
+*.tmp
+*.temp
+*.pid
