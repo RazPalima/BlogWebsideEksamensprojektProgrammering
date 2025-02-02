@@ -10,7 +10,7 @@ namespace MVCVideoGuide.Data.Entities
         public string User { get; set; }
         public string Title { get; set; }
         public string Text { get; set; }
-        public string Category { get; set; }
         public int LikeCount { get; set; }
+        public ICollection<BlogCategory>? Categories { get; set; }
     }
 }
