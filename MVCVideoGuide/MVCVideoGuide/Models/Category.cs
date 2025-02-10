@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace MVCVideoGuide.Data.Entities
+namespace MVCVideoGuide.Models
 {
     public class Category
     {

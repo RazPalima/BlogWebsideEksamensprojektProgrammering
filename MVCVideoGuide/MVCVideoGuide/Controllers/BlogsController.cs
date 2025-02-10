@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MVCVideoGuide.Data;
-using MVCVideoGuide.Data.Entities;
+using MVCVideoGuide.Models;
 
 namespace MVCVideoGuide.Controllers
 {

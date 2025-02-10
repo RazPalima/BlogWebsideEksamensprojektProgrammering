@@ -3,7 +3,6 @@ using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MVCVideoGuide.Data;
-using MVCVideoGuide.Data.Entities;
 using MVCVideoGuide.Models;
 
 namespace MVCVideoGuide.Controllers

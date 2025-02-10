@@ -1,5 +1,5 @@
-﻿ using Microsoft.EntityFrameworkCore;
-using MVCVideoGuide.Data.Entities;
+﻿using Microsoft.EntityFrameworkCore;
+using MVCVideoGuide.Models;
 
 namespace MVCVideoGuide.Data
 {
