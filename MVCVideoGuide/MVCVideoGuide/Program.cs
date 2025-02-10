@@ -3,7 +3,9 @@ using MVCVideoGuide.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddDbContext<BlogDbContext>();
+builder.Services.AddDbContext<BlogDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("BlogDbConnection") ?? throw new InvalidOperationException("Connection string 'BlogDbConnection' not found.")));
+
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

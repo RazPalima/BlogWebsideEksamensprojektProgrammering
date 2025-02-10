@@ -1,4 +1,4 @@
-namespace MVCVideoGuide.Models
+namespace MVCVideoGuide.Models.ViewModels
 {
     public class ErrorViewModel
     {

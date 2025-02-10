@@ -4,7 +4,6 @@ using MVCVideoGuide.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -12,11 +11,9 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MVCVideoGuide.Migrations
 {
     [DbContext(typeof(BlogDbContext))]
-    [Migration("20250127081548_Category")]
-    partial class Category
+    partial class BlogDbContextModelSnapshot : ModelSnapshot
     {
-        /// <inheritdoc />
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -32,10 +29,6 @@ namespace MVCVideoGuide.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Category")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
@@ -62,21 +55,13 @@ namespace MVCVideoGuide.Migrations
 
             modelBuilder.Entity("MVCVideoGuide.Data.Entities.BlogCategory", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
                     b.Property<int>("BlogId")
                         .HasColumnType("int");
 
                     b.Property<int>("CategoryId")
                         .HasColumnType("int");
 
-                    b.HasKey("Id");
-
-                    b.HasIndex("BlogId");
+                    b.HasKey("BlogId", "CategoryId");
 
                     b.HasIndex("CategoryId");
 
@@ -132,13 +117,13 @@ namespace MVCVideoGuide.Migrations
             modelBuilder.Entity("MVCVideoGuide.Data.Entities.BlogCategory", b =>
                 {
                     b.HasOne("MVCVideoGuide.Data.Entities.Blog", "Blog")
-                        .WithMany()
+                        .WithMany("BlogCategories")
                         .HasForeignKey("BlogId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("MVCVideoGuide.Data.Entities.Category", "Category")
-                        .WithMany()
+                        .WithMany("BlogCategories")
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -155,6 +140,16 @@ namespace MVCVideoGuide.Migrations
                         .HasForeignKey("BlogId");
 
                     b.Navigation("Blog");
+                });
+
+            modelBuilder.Entity("MVCVideoGuide.Data.Entities.Blog", b =>
+                {
+                    b.Navigation("BlogCategories");
+                });
+
+            modelBuilder.Entity("MVCVideoGuide.Data.Entities.Category", b =>
+                {
+                    b.Navigation("BlogCategories");
                 });
 #pragma warning restore 612, 618
         }

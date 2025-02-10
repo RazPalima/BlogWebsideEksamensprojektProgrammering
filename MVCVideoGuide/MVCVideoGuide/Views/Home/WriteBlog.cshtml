@@ -1,24 +1,48 @@
-﻿@{
+﻿@model Blog
+@{
     ViewData["Title"] = "Write Blog";
+    var categories = ViewBag.Categories;
 }
-<h2>Type in blog information here:</h2>
 
-<form method="post">
-    <label> User: </label>
-    <br />
-    <input type="text" name="User" />
-    <br />
-    <label> Blog title: </label>
-    <br />
-    <input type="text" name="Title" />
-    <br />
-    <label> Blog text: </label>
-    <br />
-    <input type="text" name="Text" />
-    <br />
-    <label> Blog kategori </label>
-    <br />
-    <input type="text" name="Category" />
-    <br />
-    <input type="submit" value="Publish blog" />
-</form>
+<h2>Write Blog</h2>
+
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="WriteBlog" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="Title" class="form-label"></label>
+                <input asp-for="Title" class="form-control"/>
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Text" class="form-label"></label>
+                <textarea asp-for="Text" class="form-control" rows="4"></textarea>
+                <span asp-validation-for="Text" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="User" class="form-label"></label>
+                <input asp-for="User" class="form-control"/>
+                <span asp-validation-for="User" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="BlogCategories" class="form-label">Blog Categories</label>
+                <select id="categorySelect" name="selectedCategoryIds" class="form-select" multiple>
+                    @foreach (var category in categories)
+                    {
+                        <option value="@category.Id">@category.Name</option>
+                    }
+                </select>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Create</button>
+                <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+            </div>
+        </form>
+    </div>
+</div>

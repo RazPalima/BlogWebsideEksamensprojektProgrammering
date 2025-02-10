@@ -57,30 +57,45 @@ namespace MVCVideoGuide.Controllers
 
 
 
-            List<string> values = _context.Blogs
-                                          .Select(p => p.Category)
-                                          .Distinct()
-                                          .OrderBy(category => category)
-                                          .ToList();
+            List<string> values = _context.Categories.Select(c =>c.Name).ToList();
             return View(values);
         }
-       
+
 
         [HttpGet]
         public IActionResult WriteBlog()
         {
+            var categories = _context.Categories.OrderBy(c => c.Name).ToList();
+            ViewBag.Categories = categories;
             return View();
+        }
 
-        }
         [HttpPost]
-        public IActionResult WriteBlog(Blog blog_instance)
+        public IActionResult WriteBlog(Blog blog, string[] selectedCategoryIds)
         {
-            blog_instance.CreatedDate = DateTime.Now;
-            blog_instance.LikeCount = 0;
-            _context.Blogs.Add(blog_instance);
-            _context.SaveChanges();
-            return View();
+            if (ModelState.IsValid)
+            {
+                if (selectedCategoryIds != null)
+                {
+                    blog.BlogCategories = new List<BlogCategory>();
+                    foreach (string categoryId in selectedCategoryIds)
+                    {
+                        BlogCategory CategoryToAdd = new BlogCategory { BlogId = blog.Id, CategoryId = int.Parse(categoryId) };
+                        blog.BlogCategories.Add(CategoryToAdd);
+                    }
+                }
+                blog.CreatedDate = DateTime.Now;
+                _context.Blogs.Add(blog);
+                _context.SaveChanges();
+
+
+                _context.SaveChanges();
+                return RedirectToAction(nameof(SeeBlogs));
+            }
+
+            return View(blog);
         }
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
