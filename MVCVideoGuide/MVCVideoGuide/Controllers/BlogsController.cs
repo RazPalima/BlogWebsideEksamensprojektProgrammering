@@ -37,8 +37,14 @@ namespace MVCVideoGuide.Controllers
                 return NotFound();
             }
 
+            //var blog = await _context.Blogs
+            //    .FirstOrDefaultAsync(m => m.Id == id);
+
             var blog = await _context.Blogs
-                .FirstOrDefaultAsync(m => m.Id == id);
+            .Include(b => b.BlogCategories) // Include BlogCategories
+            .ThenInclude(bc => bc.Category) // Include Category inside BlogCategories
+            .FirstOrDefaultAsync(m => m.Id == id);
+
             if (blog == null)
             {
                 return NotFound();
@@ -58,7 +64,7 @@ namespace MVCVideoGuide.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,CreatedDate,User,Title,Text,LikeCount")] Blog blog)
+        public async Task<IActionResult> Create([Bind("Id,CreatedDate,User,Title,Text,BlogCategories,LikeCount")] Blog blog)
         {
             if (ModelState.IsValid)
             {
@@ -90,7 +96,7 @@ namespace MVCVideoGuide.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,CreatedDate,User,Title,Text,LikeCount")] Blog blog)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,CreatedDate,User,Title,Text,BlogCategories,LikeCount")] Blog blog)
         {
             if (id != blog.Id)
             {
@@ -129,7 +135,11 @@ namespace MVCVideoGuide.Controllers
             }
 
             var blog = await _context.Blogs
-                .FirstOrDefaultAsync(m => m.Id == id);
+              .FirstOrDefaultAsync(m => m.Id == id);
+
+
+            
+
             if (blog == null)
             {
                 return NotFound();

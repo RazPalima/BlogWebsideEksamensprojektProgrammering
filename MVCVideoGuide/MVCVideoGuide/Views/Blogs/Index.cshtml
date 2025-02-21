@@ -52,13 +52,10 @@
                 @Html.DisplayFor(modelItem => item.LikeCount)
             </td>
             <td>
-                    @if (item.BlogCategories != null)
-                    {
-                        foreach (var blogCategory in item.BlogCategories)
-                        {
-                            @blogCategory.Category.Name <br />
-                        }
-                    }
+                @foreach (var blogCategory in item.BlogCategories)
+                {
+                        <span> @blogCategory.Category.Name, </span>
+                }
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
