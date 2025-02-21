@@ -15,6 +15,6 @@ namespace MVCVideoGuide.Models
         [Display(Name = "Like count")]
         public int LikeCount { get; set; }
         [Display(Name = "Categories")]
-        public ICollection<BlogCategory>? BlogCategories { get; set; }
+        public ICollection<BlogCategory> BlogCategories { get; set; }
     }
 }
