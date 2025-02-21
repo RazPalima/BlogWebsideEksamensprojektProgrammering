@@ -27,6 +27,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.LikeCount)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BlogCategories)
+            </th>
             <th></th>
         </tr>
     </thead>
@@ -47,6 +50,12 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.LikeCount)
+            </td>
+            <td>
+                @foreach (var blogCategory in item.BlogCategories)
+                {
+                    @blogCategory.Category.Name <br />
+                }
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |

@@ -12,7 +12,9 @@ namespace MVCVideoGuide.Models
         public string Title { get; set; }
         [Required]
         public string Text { get; set; }
+        [Display(Name = "Like count")]
         public int LikeCount { get; set; }
+        [Display(Name = "Categories")]
         public ICollection<BlogCategory>? BlogCategories { get; set; }
     }
 }

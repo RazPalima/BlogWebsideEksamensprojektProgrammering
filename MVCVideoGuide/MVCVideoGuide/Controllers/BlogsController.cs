@@ -19,10 +19,14 @@ namespace MVCVideoGuide.Controllers
             _context = context;
         }
 
+
         // GET: Blogs
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Blogs.ToListAsync());
+            List<Blog> categories = await _context.Blogs.Include(b => b.BlogCategories)
+                .ThenInclude(bc => bc.Category)
+                .ToListAsync();
+            return View(categories);
         }
 
         // GET: Blogs/Details/5
