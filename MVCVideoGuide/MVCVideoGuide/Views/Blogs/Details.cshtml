@@ -39,18 +39,8 @@
             @Html.DisplayNameFor(model => model.BlogCategories)
         </dt>
         <dd class="col-sm-10">
-             @foreach (var blogCategory in Model.BlogCategories)
-             {
-                int i = blogCategory in Model.BlogCategories;
-                if (blogCategory.CategoryId == i)
-                {
-                    <span> @blogCategory.Category.Name </span>
-                }
-                else
-                {
-                    <span> @blogCategory.Category.Name, </span>
-                }
-             }
+            <p>@string.Join(", ", Model.BlogCategories.Select(bc => bc.Category.Name))</p>
+
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.LikeCount)
         </dt>

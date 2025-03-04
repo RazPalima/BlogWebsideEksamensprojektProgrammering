@@ -21,13 +21,38 @@ namespace MVCVideoGuide.Controllers
 
 
         // GET: Blogs
+        [HttpGet]
         public async Task<IActionResult> Index()
         {
             List<Blog> categories = await _context.Blogs.Include(b => b.BlogCategories)
                 .ThenInclude(bc => bc.Category)
                 .ToListAsync();
+            ViewBag.Categories = await _context.Categories.OrderBy(c => c.Name).ToListAsync();
             return View(categories);
         }
+        [HttpPost]
+        public async Task<IActionResult> Index(int[] selectedCategoryIds)
+        {
+            // Get all categories to populate the dropdown list
+            ViewBag.Categories = await _context.Categories.OrderBy(c => c.Name).ToListAsync();
+
+            // Fetch all blogs with their categories
+            var query = _context.Blogs.Include(b => b.BlogCategories)
+                .ThenInclude(bc => bc.Category)
+                .AsQueryable();
+
+            if (selectedCategoryIds != null && selectedCategoryIds.Length > 0)
+            {
+                // Filter blogs that contain all the selected categories
+                query = query.Where(b => b.BlogCategories.All(bc => selectedCategoryIds.Contains(bc.CategoryId)));
+            }
+
+            // Execute the query and get the filtered blogs
+            var blogs = await query.ToListAsync();
+
+            return View(blogs);
+        }
+
 
         // GET: Blogs/Details/5
         public async Task<IActionResult> Details(int? id)
@@ -54,26 +79,46 @@ namespace MVCVideoGuide.Controllers
         }
 
         // GET: Blogs/Create
-        public IActionResult Create()
+        [HttpGet]
+        public async Task<IActionResult> Create()
         {
+            List<Category> categories = await _context.Categories.OrderBy(c => c.Name).ToListAsync();
+            ViewBag.Categories = categories;
             return View();
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create([Bind("User,Title,Text,LikeCount")] Blog blog, int[] selectedCategoryIds)
+        {
+            if (ModelState.IsValid)
+            {
+                if (selectedCategoryIds != null)
+                {
+                    // ✅ Ensure BlogCategories is initialized properly
+                    blog.BlogCategories = new List<BlogCategory>();
+                    foreach (int categoryId in selectedCategoryIds)
+                    {
+                        blog.BlogCategories.Add(new BlogCategory { BlogId = blog.Id, CategoryId = categoryId });
+                    }
+
+                    blog.CreatedDate = DateTime.Now;
+                    _context.Blogs.Add(blog);
+                    await _context.SaveChangesAsync();
+
+                    return RedirectToAction(nameof(Index));
+                }
+            }
+            List<Category> categories = await _context.Categories.OrderBy(c => c.Name).ToListAsync();
+            ViewBag.Categories = categories;
+            return View();
+        }
+
+
 
         // POST: Blogs/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,CreatedDate,User,Title,Text,BlogCategories,LikeCount")] Blog blog)
-        {
-            if (ModelState.IsValid)
-            {
-                _context.Add(blog);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            return View(blog);
-        }
 
         // GET: Blogs/Edit/5
         public async Task<IActionResult> Edit(int? id)

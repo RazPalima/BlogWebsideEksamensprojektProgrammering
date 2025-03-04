@@ -8,8 +8,8 @@ namespace MVCVideoGuide.Models
     {
         public int Id { get; set; }
         [Required]
-        public string Name { get; set; }
-        public ICollection<BlogCategory>? BlogCategories { get; set; }
+        public required string Name { get; set; }
+        public ICollection<BlogCategory> BlogCategories { get; set; } = new List<BlogCategory>();
 
     }
 }

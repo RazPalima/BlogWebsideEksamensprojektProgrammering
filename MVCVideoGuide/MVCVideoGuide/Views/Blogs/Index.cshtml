@@ -6,6 +6,23 @@
 
 <h1>Index</h1>
 
+<div class="col-md-4">
+    <form method="post" asp-action="Index">
+        <div class="form-group">
+            <label for="categoryFilter">Filter by Categories:</label>
+            <select id="categoryFilter" name="selectedCategoryIds" class="form-control" multiple>
+                @if (ViewBag.Categories != null)
+                {
+                    foreach (var category in ViewBag.Categories)
+                    {
+                        <option value="@category.Id">@category.Name</option>
+                    }
+                }
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Filter</button>
+    </form>
+</div>
 <p>
     <a asp-action="Create">Create New</a>
 </p>
@@ -52,10 +69,7 @@
                 @Html.DisplayFor(modelItem => item.LikeCount)
             </td>
             <td>
-                @foreach (var blogCategory in item.BlogCategories)
-                {
-                        <span> @blogCategory.Category.Name, </span>
-                }
+                <p>@string.Join(", ", item.BlogCategories.Select(bc => bc.Category.Name))</p>
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |

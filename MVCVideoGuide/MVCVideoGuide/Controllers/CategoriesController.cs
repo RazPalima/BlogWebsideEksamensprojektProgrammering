@@ -56,6 +56,12 @@ namespace MVCVideoGuide.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Name")] Category category)
         {
+            if (_context.Categories.Any(c => c.Name == category.Name))
+            {
+                ModelState.AddModelError("Name", "Category name must be unique.");
+                return View(category);
+            }
+
             if (ModelState.IsValid)
             {
                 _context.Add(category);

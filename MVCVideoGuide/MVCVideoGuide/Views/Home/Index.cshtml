@@ -4,12 +4,31 @@
 <script src="~/js/fetchAPI.js"></script>
 <script src="~/js/site.js"></script>
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-    <button onclick="download(filename, text)()">Write Blog</button>
-    <input type="text" name="Cost" />
-</div>
-
-
-
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Blog Website</h1>
+            <p>Eksamensprojekt</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <h2>Welcome to the Blog Website</h2>
+            <p>
+                Search blogs and filter by category. Comment on a blog by selecting
+                'Details'. Get started below:
+            </p>
+            <a class="btn btn-primary" asp-controller="Blogs" asp-action="Index">See blogs</a>
+        </div>
+        <div class="col-md-4">
+            <h2>Add new categories for blogs</h2>
+            <p>Add or delete categories for blogs here below</p>
+            <a class="btn btn-primary" asp-controller="Categories" asp-action="Index">See categories</a>
+        </div>
+        <div class="col-md-4">
+            <h2>About us</h2>
+            <p>If you want to learn more about this webiste</p>
+            <a class="btn btn-primary" asp-action="About">About</a>
+        </div>
+    </div>
+</body>
