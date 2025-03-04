@@ -55,11 +55,46 @@ namespace MVCVideoGuide.Controllers
 
 
         // GET: Blogs/Details/5
+        [HttpGet]
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
             {
                 return NotFound();
+            }
+
+            //var blog = await _context.Blogs
+            //    .FirstOrDefaultAsync(m => m.Id == id);
+
+            var blog = await _context.Blogs
+            .Include(b => b.BlogCategories) // Include BlogCategories
+            .ThenInclude(bc => bc.Category) // Include Category inside BlogCategories
+            .FirstOrDefaultAsync(m => m.Id == id);
+
+            if (blog == null)
+            {
+                return NotFound();
+            }
+            List<Comment> comments = await _context.Comments.ToListAsync();
+            ViewBag.Comments = comments;
+            return View(blog);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Details(int? id, [Bind("User,Text")] Comment comment)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+            if (ModelState.IsValid)
+            {
+                comment.CreatedDate = DateTime.Now;
+                comment.BlogId = id.Value;
+                _context.Comments.Add(comment);
+                await _context.SaveChangesAsync();
+
+                return RedirectToAction(nameof(Details));
             }
 
             //var blog = await _context.Blogs

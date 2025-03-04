@@ -3,6 +3,7 @@
 
 @{
     ViewData["Title"] = "Details";
+    List<Comment> comments = ViewBag.Comments;
 }
 
 <h1>Details</h1>
@@ -53,3 +54,59 @@
     <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
     <a asp-action="Index">Back to List</a>
 </div>
+
+<h1>Comments</h1>
+<h4>Write</h4>
+<hr />
+<div class="col-md-6">
+    <form asp-action="Details" method="post">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="User" class="control-label"></label>
+            <input asp-for="User" class="form-control" />
+            <span asp-validation-for="User" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Text" class="control-label"></label>
+            <textarea asp-for="Text" class="form-control"></textarea>
+            <span asp-validation-for="Text" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Create" class="btn btn-primary" />
+        </div>
+    </form>
+</div>
+<hr />
+<h4>Read</h4>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Created Date
+            </th>
+            <th>
+                User
+            </th>
+            <th>
+                Text
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var comment in comments)
+        {
+            <tr>
+                <td>
+                    @comment.CreatedDate
+                </td>
+                <td>
+                    @comment.User
+                </td>
+                <td>
+                    @comment.Text
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
