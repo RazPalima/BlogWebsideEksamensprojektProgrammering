@@ -2,7 +2,8 @@
 {
     public class BlogCommentsViewModel
     {
-        public Blog? SelectedBlog;
-        public List<Comment>? Comments;
+        public Blog Blog { get; set; }
+        public Comment NewComment { get; set; } = new Comment();
+        public List<Comment> Comments { get; set; } = new List<Comment>();
     }
 }

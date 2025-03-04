@@ -8,11 +8,11 @@ namespace MVCVideoGuide.Models
         [Display(Name = "Date written")]
         public DateTime CreatedDate { get; set; }
         [Required]
-        public required string User { get; set; }
+        public string User { get; set; }
         [Required]
-        public required string Title { get; set; }
+        public string Title { get; set; }
         [Required]
-        public required string Text { get; set; }
+        public string Text { get; set; }
         [Display(Name = "Like count")]
         public int LikeCount { get; set; }
         [Display(Name = "Categories")]

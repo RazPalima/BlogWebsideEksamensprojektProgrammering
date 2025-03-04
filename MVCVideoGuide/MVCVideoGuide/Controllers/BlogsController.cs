@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MVCVideoGuide.Data;
 using MVCVideoGuide.Models;
+using MVCVideoGuide.Models.ViewModels;
 
 namespace MVCVideoGuide.Controllers
 {
@@ -63,55 +64,58 @@ namespace MVCVideoGuide.Controllers
                 return NotFound();
             }
 
-            //var blog = await _context.Blogs
-            //    .FirstOrDefaultAsync(m => m.Id == id);
-
             var blog = await _context.Blogs
-            .Include(b => b.BlogCategories) // Include BlogCategories
-            .ThenInclude(bc => bc.Category) // Include Category inside BlogCategories
-            .FirstOrDefaultAsync(m => m.Id == id);
+                .Include(b => b.BlogCategories)
+                .ThenInclude(bc => bc.Category)
+                .FirstOrDefaultAsync(m => m.Id == id);
 
             if (blog == null)
             {
                 return NotFound();
             }
-            List<Comment> comments = await _context.Comments.ToListAsync();
-            ViewBag.Comments = comments;
-            return View(blog);
+
+            var comments = await _context.Comments.Where(c => c.BlogId == id).ToListAsync();
+
+            var viewModel = new BlogCommentsViewModel
+            {
+                Blog = blog,
+                Comments = comments
+            };
+
+            return View(viewModel);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Details(int? id, [Bind("User,Text")] Comment comment)
+        public async Task<IActionResult> Details(int id, BlogCommentsViewModel model)
         {
-            if (id == null)
+            if (!ModelState.IsValid)
             {
-                return NotFound();
-            }
-            if (ModelState.IsValid)
-            {
-                comment.CreatedDate = DateTime.Now;
-                comment.BlogId = id.Value;
-                _context.Comments.Add(comment);
-                await _context.SaveChangesAsync();
+                // Reload the blog and comments in case of validation errors
+                model.Blog = await _context.Blogs
+                    .Include(b => b.BlogCategories)
+                    .ThenInclude(bc => bc.Category)
+                    .FirstOrDefaultAsync(m => m.Id == id);
 
-                return RedirectToAction(nameof(Details));
-            }
+                model.Comments = await _context.Comments.Where(c => c.BlogId == id).ToListAsync();
 
-            //var blog = await _context.Blogs
-            //    .FirstOrDefaultAsync(m => m.Id == id);
-
-            var blog = await _context.Blogs
-            .Include(b => b.BlogCategories) // Include BlogCategories
-            .ThenInclude(bc => bc.Category) // Include Category inside BlogCategories
-            .FirstOrDefaultAsync(m => m.Id == id);
-
-            if (blog == null)
-            {
-                return NotFound();
+                return View(model);
             }
 
-            return View(blog);
+            // Add new comment
+            var comment = new Comment
+            {
+                User = model.NewComment.User,
+                Text = model.NewComment.Text,
+                BlogId = id,
+                CreatedDate = DateTime.Now
+            };
+
+            _context.Comments.Add(comment);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(Details), new { id });
         }
+
 
         // GET: Blogs/Create
         [HttpGet]
