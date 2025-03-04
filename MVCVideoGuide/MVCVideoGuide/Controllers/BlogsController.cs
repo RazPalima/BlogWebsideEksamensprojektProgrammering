@@ -86,35 +86,39 @@ namespace MVCVideoGuide.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Details(int id, BlogCommentsViewModel model)
+        public async Task<IActionResult> Details(int id, [Bind("NewComment.User,NewComment.Text")] Comment comment)
         {
+            Console.WriteLine(!ModelState.IsValid);
             if (!ModelState.IsValid)
             {
-                // Reload the blog and comments in case of validation errors
-                model.Blog = await _context.Blogs
+                // Reload the blog and comments if there's a validation error
+                var blog = await _context.Blogs
                     .Include(b => b.BlogCategories)
                     .ThenInclude(bc => bc.Category)
                     .FirstOrDefaultAsync(m => m.Id == id);
 
-                model.Comments = await _context.Comments.Where(c => c.BlogId == id).ToListAsync();
+                var comments = await _context.Comments.Where(c => c.BlogId == id).ToListAsync();
 
-                return View(model);
+                var viewModel = new BlogCommentsViewModel
+                {
+                    Blog = blog!,
+                    Comments = comments,
+                    NewComment = comment  // Preserve entered comment data
+                };
+
+                return View(viewModel);
             }
 
-            // Add new comment
-            var comment = new Comment
-            {
-                User = model.NewComment.User,
-                Text = model.NewComment.Text,
-                BlogId = id,
-                CreatedDate = DateTime.Now
-            };
+            // Set additional properties before saving
+            comment.BlogId = id;
+            comment.CreatedDate = DateTime.Now;
 
             _context.Comments.Add(comment);
             await _context.SaveChangesAsync();
 
             return RedirectToAction(nameof(Details), new { id });
         }
+
 
 
         // GET: Blogs/Create

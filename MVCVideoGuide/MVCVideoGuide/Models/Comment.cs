@@ -11,6 +11,6 @@ namespace MVCVideoGuide.Models
         [Required]
         public string Text { get; set; }
         public int BlogId { get; set; }
-        public Blog Blog { get; set; }
+        public Blog Blog { get; set; } = new Blog();
     }
 }
