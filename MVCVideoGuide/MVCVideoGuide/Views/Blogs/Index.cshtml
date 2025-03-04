@@ -11,12 +11,9 @@
         <div class="form-group">
             <label for="categoryFilter">Filter by Categories:</label>
             <select id="categoryFilter" name="selectedCategoryIds" class="form-control" multiple>
-                @if (ViewBag.Categories != null)
+                @foreach (var category in ViewBag.Categories)
                 {
-                    foreach (var category in ViewBag.Categories)
-                    {
-                        <option value="@category.Id">@category.Name</option>
-                    }
+                    <option value="@category.Id">@category.Name</option>
                 }
             </select>
         </div>
