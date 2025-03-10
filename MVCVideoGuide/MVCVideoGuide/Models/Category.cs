@@ -7,9 +7,10 @@ namespace MVCVideoGuide.Models
     public class Category
     {
         public int Id { get; set; }
+        [StringLength(60, MinimumLength = 2)]
         [Required]
-        public required string Name { get; set; }
-        public ICollection<BlogCategory> BlogCategories { get; set; } = new List<BlogCategory>();
+        public string Name { get; set; } = "none";
+        public ICollection<BlogCategory> BlogCategories { get; } = [];
 
     }
 }

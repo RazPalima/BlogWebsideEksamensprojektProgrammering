@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using MVCVideoGuide.Data;
 using MVCVideoGuide.Models;
@@ -59,7 +61,6 @@ namespace MVCVideoGuide.Controllers
             if (_context.Categories.Any(c => c.Name == category.Name))
             {
                 ModelState.AddModelError("Name", "Category name must be unique.");
-                return View(category);
             }
 
             if (ModelState.IsValid)
@@ -92,11 +93,16 @@ namespace MVCVideoGuide.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Name")] Category category)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name")] Category category)
         {
             if (id != category.Id)
             {
                 return NotFound();
+            }
+
+            if (_context.Categories.Any(c => c.Name == category.Name))
+            {
+                ModelState.AddModelError("Name", "Category name must be unique.");
             }
 
             if (ModelState.IsValid)
@@ -116,6 +122,11 @@ namespace MVCVideoGuide.Controllers
                     {
                         throw;
                     }
+                }
+                catch (DbUpdateException)
+                {
+                    ModelState.AddModelError("Name", "Category name must be unique.");
+                    return View(category);
                 }
                 return RedirectToAction(nameof(Index));
             }

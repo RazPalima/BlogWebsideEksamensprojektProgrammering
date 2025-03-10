@@ -5,7 +5,11 @@
 }
 
 <h1>Index</h1>
-
+<h4>Write Blog</h4>
+<div>
+    <a asp-action="Create">Create New</a>
+</div>
+<hr />
 <div class="col-md-4">
     <form method="post" asp-action="Index">
         <div class="form-group">
@@ -20,9 +24,18 @@
         <button type="submit" class="btn btn-primary">Filter</button>
     </form>
 </div>
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
+<hr />
+<div>
+    Choose 1 blog attribute below to order results in ascending order:
+</div>
+<div>
+    <a asp-action="Index" asp-route-id="" class="btn btn-secondary">Clear ordering</a>&nbsp;
+    <a asp-action="Index" asp-route-id="1" class="btn btn-primary">Date written (or last edited)</a>&nbsp;
+    <a asp-action="Index" asp-route-id="2" class="btn btn-primary">User</a>&nbsp;
+    <a asp-action="Index" asp-route-id="3" class="btn btn-primary">Title</a>
+    
+</div>
+<hr />
 <table class="table">
     <thead>
         <tr>

@@ -43,22 +43,19 @@
 <hr />
 <div class="col-md-6">
     <form asp-action="Details" method="post">
-        <input type="hidden" asp-for="Blog.Id" />
-
-        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <input type="hidden" name="id" value="@Model.Blog.Id" />
+        <input type="hidden" asp-for="NewComment.BlogId" value="@Model.Blog.Id" />
 
         <div class="form-group">
             <label asp-for="NewComment.User" class="control-label"></label>
             <input asp-for="NewComment.User" class="form-control" />
             <span asp-validation-for="NewComment.User" class="text-danger"></span>
         </div>
-
         <div class="form-group">
             <label asp-for="NewComment.Text" class="control-label"></label>
             <textarea asp-for="NewComment.Text" class="form-control"></textarea>
             <span asp-validation-for="NewComment.Text" class="text-danger"></span>
         </div>
-
         <div class="form-group">
             <input type="submit" value="Create" class="btn btn-primary" />
         </div>
@@ -99,3 +96,8 @@
         }
     </tbody>
 </table>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

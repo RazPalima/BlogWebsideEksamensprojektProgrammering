@@ -34,7 +34,7 @@
                 <span asp-validation-for="LikeCount" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label class="control-label">Blog Categories</label>
+                <label for="selectedCategoryIds" class="control-label">Blog Categories</label>
                 <select name="selectedCategoryIds" class="form-select" multiple required>
                     @foreach (var category in categories)
                     {

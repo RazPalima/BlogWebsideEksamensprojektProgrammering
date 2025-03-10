@@ -76,7 +76,6 @@ namespace MVCVideoGuide.Controllers
             {
                 if (selectedCategoryIds != null)
                 {
-                    blog.BlogCategories = new List<BlogCategory>();
                     foreach (string categoryId in selectedCategoryIds)
                     {
                         BlogCategory CategoryToAdd = new BlogCategory { BlogId = blog.Id, CategoryId = int.Parse(categoryId) };
