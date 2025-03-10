@@ -53,26 +53,43 @@ namespace MVCVideoGuide.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Index(int[] selectedCategoryIds)
+        public async Task<IActionResult> Index(int? id, int[] selectedCategoryIds)
         {
-            // Get all categories to populate the dropdown list
-            ViewBag.Categories = await _context.Categories.OrderBy(c => c.Name).ToListAsync();
 
-            // Fetch all blogs with their categories
-            var query = _context.Blogs.Include(b => b.BlogCategories)
+            IQueryable<Blog> blogs = _context.Blogs
+                .Include(b => b.BlogCategories)
                 .ThenInclude(bc => bc.Category)
                 .AsQueryable();
 
             if (selectedCategoryIds != null && selectedCategoryIds.Length > 0)
             {
                 // Filter blogs that contain all the selected categories
-                query = query.Where(b => b.BlogCategories.All(bc => selectedCategoryIds.Contains(bc.CategoryId)));
+                blogs = blogs.Where(b => b.BlogCategories.All(bc => selectedCategoryIds.Contains(bc.CategoryId)));
             }
 
-            // Execute the query and get the filtered blogs
-            var blogs = await query.ToListAsync();
+            if (id != null)
+            {
+                switch (id.Value)
+                {
+                    case 1:
+                        blogs = blogs.OrderBy(b => b.CreatedDate);
+                        break;
+                    case 2:
+                        blogs = blogs.OrderBy(b => b.User);
+                        break;
+                    case 3:
+                        blogs = blogs.OrderBy(b => b.Title);
+                        break;
+                    default:
+                        break;
+                }
+            }
+            // Get all categories to populate the dropdown list
+            ViewBag.Categories = await _context.Categories.OrderBy(c => c.Name).ToListAsync();
 
-            return View(blogs);
+
+
+            return View(await blogs.AsNoTracking().ToListAsync());
         }
 
 
