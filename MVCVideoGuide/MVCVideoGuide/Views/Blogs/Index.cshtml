@@ -6,12 +6,32 @@
 
 <h1>Index</h1>
 <h4>Write Blog</h4>
+<div>Click below to add a write a new blog</div>
 <div>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create" class="btn btn-primary">Create New</a>
 </div>
 <hr />
+<div class="row"></div>
 <div class="col-md-4">
     <form method="post" asp-action="Index">
+        <div class="form-check">
+            <input type="radio" class="form-check-input" id="NoneSort" name="id" value="" checked />
+            <label for="NoneSort" class="control-label">None</label>
+        </div>
+        <div class="form-check">
+            <input id="DateSort" type="radio" name="id" class="form-check-input" value="1" />
+            <label for="DateSort" class="control-label">Date written (or last edited)</label>
+        </div>
+        <div class="form-check">
+            <input id="DateSort" type="radio" name="id" class="form-check-input" value="2" />
+            <label for="DateSort" class="control-label">User</label>
+        </div>
+        <div class="form-check">
+            <input id="DateSort" type="radio" name="id" class="form-check-input" value="3" />
+            <label for="DateSort" class="control-label">Title</label>
+        </div>
+
+
         <div class="form-group">
             <label for="categoryFilter">Filter by Categories:</label>
             <select id="categoryFilter" name="selectedCategoryIds" class="form-control" multiple>
@@ -28,13 +48,12 @@
 <div>
     Choose 1 blog attribute below to order results in ascending order:
 </div>
-<div>
-    <a asp-action="Index" asp-route-id="" class="btn btn-secondary">Clear ordering</a>&nbsp;
+@* <div>
+    <a asp-action="Index"  class="btn btn-secondary">Clear ordering</a>&nbsp;
     <a asp-action="Index" asp-route-id="1" class="btn btn-primary">Date written (or last edited)</a>&nbsp;
     <a asp-action="Index" asp-route-id="2" class="btn btn-primary">User</a>&nbsp;
     <a asp-action="Index" asp-route-id="3" class="btn btn-primary">Title</a>
-    
-</div>
+</div> *@
 <hr />
 <table class="table">
     <thead>
@@ -82,8 +101,8 @@
                     <p>@string.Join(", ", item.BlogCategories.Select(bc => bc.Category.Name))</p>
                 </td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a><br />
+                    <a asp-action="Details" asp-route-id="@item.Id">Comments</a><br />
                     <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
                 </td>
             </tr>

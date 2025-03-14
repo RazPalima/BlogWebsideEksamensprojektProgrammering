@@ -53,7 +53,7 @@ namespace MVCVideoGuide.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Index(int? id, int[] selectedCategoryIds)
+        public async Task<IActionResult> Index(int? id, string selectedBlogAttributeSorting, int[] selectedCategoryIds)
         {
 
             IQueryable<Blog> blogs = _context.Blogs
