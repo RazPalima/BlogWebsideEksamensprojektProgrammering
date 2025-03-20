@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Blog>
+﻿@model BlogCollectionCategoriesViewModel
 
 @{
     ViewData["Title"] = "Index";
@@ -6,106 +6,105 @@
 
 <h1>Index</h1>
 <h4>Write Blog</h4>
-<div>Click below to add a write a new blog</div>
+<div>Click below to add a write a new blog:</div>
 <div>
-    <a asp-action="Create" class="btn btn-primary">Create New</a>
+    <a asp-action="Create" class="btn btn-primary">Write New Blog</a>
 </div>
 <hr />
 <div class="row"></div>
-<div class="col-md-4">
-    <form method="post" asp-action="Index">
+<h4>Filter and sort blogs</h4>
+<div>
+    Choose blog attribute below to order blogs by in ascending order
+</div>
+<div class="col-md-6">
+    <form asp-action="Index">
         <div class="form-check">
-            <input type="radio" class="form-check-input" id="NoneSort" name="id" value="" checked />
-            <label for="NoneSort" class="control-label">None</label>
+            <input type="radio" class="form-check-input" asp-for="BlogAttributeSorting" value="" checked />
+            <label asp-for="BlogAttributeSorting" class="control-label">None</label>
         </div>
         <div class="form-check">
-            <input id="DateSort" type="radio" name="id" class="form-check-input" value="1" />
-            <label for="DateSort" class="control-label">Date written (or last edited)</label>
+            <input type="radio" class="form-check-input" asp-for="BlogAttributeSorting" value="CreatedDate" />
+            <label asp-for="BlogAttributeSorting" class="control-label">Date written (or last edited)</label>
         </div>
         <div class="form-check">
-            <input id="DateSort" type="radio" name="id" class="form-check-input" value="2" />
-            <label for="DateSort" class="control-label">User</label>
+            <input type="radio" class="form-check-input" asp-for="BlogAttributeSorting" value="User" />
+            <label asp-for="BlogAttributeSorting" class="control-label">User</label>
         </div>
         <div class="form-check">
-            <input id="DateSort" type="radio" name="id" class="form-check-input" value="3" />
-            <label for="DateSort" class="control-label">Title</label>
+            <input type="radio" class="form-check-input" asp-for="BlogAttributeSorting" value="Title" />
+            <label asp-for="BlogAttributeSorting" class="control-label">Title</label>
         </div>
-
+        <div class="form-check">
+            <input type="radio" class="form-check-input" asp-for="BlogAttributeSorting" value="LikeCount" />
+            <label asp-for="BlogAttributeSorting" class="control-label">Like count</label>
+        </div>
 
         <div class="form-group">
-            <label for="categoryFilter">Filter by Categories:</label>
-            <select id="categoryFilter" name="selectedCategoryIds" class="form-control" multiple>
-                @foreach (var category in ViewBag.Categories)
-                {
-                    <option value="@category.Id">@category.Name</option>
-                }
+            <label asp-for="SelectedCategoryIds"></label><br />
+            <label asp-for="SelectedCategoryIds"><kbd>Ctrl + Left-click</kbd> to select more categories</label>
+            <select asp-for="SelectedCategoryIds" asp-items="Model.Categories" class="form-control">
+                <option>All Categories</option>
             </select>
         </div>
         <button type="submit" class="btn btn-primary">Filter</button>
     </form>
 </div>
-<hr />
-<div>
-    Choose 1 blog attribute below to order results in ascending order:
-</div>
-@* <div>
-    <a asp-action="Index"  class="btn btn-secondary">Clear ordering</a>&nbsp;
-    <a asp-action="Index" asp-route-id="1" class="btn btn-primary">Date written (or last edited)</a>&nbsp;
-    <a asp-action="Index" asp-route-id="2" class="btn btn-primary">User</a>&nbsp;
-    <a asp-action="Index" asp-route-id="3" class="btn btn-primary">Title</a>
-</div> *@
-<hr />
+<h4>Read blogs</h4>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.CreatedDate)
+                @Html.DisplayNameFor(model => model.BlogCollection.First().CreatedDate)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.User)
+                @Html.DisplayNameFor(model => model.BlogCollection.First().User)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Title)
+                @Html.DisplayNameFor(model => model.BlogCollection.First().Title)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Text)
+                @Html.DisplayNameFor(model => model.BlogCollection.First().Text)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.LikeCount)
+                @Html.DisplayNameFor(model => model.BlogCollection.First().LikeCount)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.BlogCategories)
+                @Html.DisplayNameFor(model => model.BlogCollection.First().BlogCategories)
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model) {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.CreatedDate)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.User)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Title)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Text)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.LikeCount)
-                </td>
-                <td>
-                    <p>@string.Join(", ", item.BlogCategories.Select(bc => bc.Category.Name))</p>
-                </td>
-                <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a><br />
-                    <a asp-action="Details" asp-route-id="@item.Id">Comments</a><br />
-                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-                </td>
-            </tr>
+        @if (Model.BlogCollection.Any())
+        {
+            foreach (Blog blog in Model.BlogCollection)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(blogItem => blog.CreatedDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(blogItem => blog.User)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(blogItem => blog.Title)
+                    </td>
+                    <td>
+                        @blog.ShortenedText()
+                    </td>
+                    <td>
+                        @Html.DisplayFor(blogItem => blog.LikeCount)
+                    </td>
+                    <td>
+                        @blog.ConcatenatedBlogCategories()
+                    </td>
+                    <td>
+                        <a asp-action="Details" asp-route-id="@blog.Id">Comments</a><br />
+                        <a asp-action="Edit" asp-route-id="@blog.Id">Edit</a><br />
+                        <a asp-action="Delete" asp-route-id="@blog.Id">Delete</a>
+                    </td>
+                </tr>
+            }
         }
     </tbody>
 </table>

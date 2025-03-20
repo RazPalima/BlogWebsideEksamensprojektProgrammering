@@ -1,4 +1,4 @@
-﻿@model Blog
+﻿@model BlogCategoriesViewModel
 
 @{
     ViewData["Title"] = "Edit";
@@ -9,39 +9,44 @@
 <h4>Blog</h4>
 <hr />
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-6">
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="Id" />
+            <input type="hidden" asp-for="Blog.Id" value="@Model.Blog.Id" />
             <div class="form-group">
-                <label asp-for="User" class="control-label"></label>
-                <input asp-for="User" class="form-control" />
-                <span asp-validation-for="User" class="text-danger"></span>
+                <label asp-for="Blog.User" class="control-label"></label>
+                <input asp-for="Blog.User" class="form-control" />
+                <span asp-validation-for="Blog.User" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Title" class="control-label"></label>
-                <input asp-for="Title" class="form-control" />
-                <span asp-validation-for="Title" class="text-danger"></span>
+                <label asp-for="Blog.Title" class="control-label"></label>
+                <input asp-for="Blog.Title" class="form-control" />
+                <span asp-validation-for="Blog.Title" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Text" class="control-label"></label>
-                <input asp-for="Text" class="form-control" />
-                <span asp-validation-for="Text" class="text-danger"></span>
+                <label asp-for="Blog.Text" class="control-label"></label>
+                <input asp-for="Blog.Text" class="form-control" />
+                <span asp-validation-for="Blog.Text" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="LikeCount" class="control-label"></label>
-                <input asp-for="LikeCount" class="form-control" />
-                <span asp-validation-for="LikeCount" class="text-danger"></span>
+                <label asp-for="Blog.LikeCount" class="control-label"></label>
+                <input asp-for="Blog.LikeCount" class="form-control" />
+                <span asp-validation-for="Blog.LikeCount" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label for="selectedCategoryIds" class="control-label">Blog Categories</label>
+                <label asp-for="SelectedCategoryIds" class="control-label"></label><br />
+                <label asp-for="SelectedCategoryIds" class="control-label"><kbd>Ctrl + Left-click</kbd> to select more categories</label>
+                <select asp-for="SelectedCategoryIds" asp-items="Model.Categories" class="form-control"></select>
+            </div>
+            @* <div class="form-group">
+                <label for="selectedCategoryIds" class="control-label">Blog Categories<br /><kbd>Ctrl + Left-click</kbd> to select more categories</label>
                 <select name="selectedCategoryIds" class="form-select" multiple required>
                     @foreach (var category in ViewBag.Categories)
                     {
                         <option value="@category.Id">@category.Name</option>
                     }
                 </select>
-            </div>
+            </div> *@
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
             </div>

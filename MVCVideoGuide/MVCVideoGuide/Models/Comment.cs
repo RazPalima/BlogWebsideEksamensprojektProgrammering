@@ -8,10 +8,11 @@ namespace MVCVideoGuide.Models
         [DataType(DataType.Date)]
         public DateTime CreatedDate { get; set; }
         [Required]
-        public string User { get; set; } = "none";
+        public string User { get; set; } = string.Empty;
         [Required]
-        public string Text { get; set; } = "none";
+        public string Text { get; set; } = string.Empty;
         public int BlogId { get; set; }
-        public Blog Blog { get; set; } = null!;
+
+        public Blog? Blog { get; set; }// = null!;
     }
 }

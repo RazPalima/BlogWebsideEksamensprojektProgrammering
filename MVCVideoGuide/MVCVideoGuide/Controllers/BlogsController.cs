@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -24,72 +25,55 @@ namespace MVCVideoGuide.Controllers
 
 
         // GET: Blogs
-        [HttpGet]
-        public async Task<IActionResult> Index(int? id)
+        public async Task<IActionResult> Index(BlogCollectionCategoriesViewModel blogCollectionCategoriesVM)
         {
-            IQueryable<Blog> blogs = _context.Blogs
-                .Include(b => b.BlogCategories)
-                .ThenInclude(bc => bc.Category)
-                .AsQueryable();
-            if (id != null)
-            {
-                switch (id.Value)
-                {
-                    case 1:
-                        blogs = blogs.OrderBy(b => b.CreatedDate);
-                        break;
-                    case 2:
-                        blogs = blogs.OrderBy(b => b.User);
-                        break;
-                    case 3:
-                        blogs = blogs.OrderBy(b => b.Title);
-                        break;
-                    default:
-                        break;
-                }
-            }           
-            ViewBag.Categories = await _context.Categories.OrderBy(c => c.Name).ToListAsync();
-            return View(await blogs.AsNoTracking().ToListAsync());
-        }
-
-        [HttpPost]
-        public async Task<IActionResult> Index(int? id, string selectedBlogAttributeSorting, int[] selectedCategoryIds)
-        {
-
+            // Start with all blogs
             IQueryable<Blog> blogs = _context.Blogs
                 .Include(b => b.BlogCategories)
                 .ThenInclude(bc => bc.Category)
                 .AsQueryable();
 
-            if (selectedCategoryIds != null && selectedCategoryIds.Length > 0)
+            // Filter by selected categories
+            if (blogCollectionCategoriesVM.SelectedCategoryIds != null && blogCollectionCategoriesVM.SelectedCategoryIds.Any())
             {
-                // Filter blogs that contain all the selected categories
-                blogs = blogs.Where(b => b.BlogCategories.All(bc => selectedCategoryIds.Contains(bc.CategoryId)));
+                blogs = blogs.Where(b => b.BlogCategories.All(bc => blogCollectionCategoriesVM.SelectedCategoryIds.Contains(bc.CategoryId)));
             }
 
-            if (id != null)
+            // Sort by selected attribute
+            if (!string.IsNullOrEmpty(blogCollectionCategoriesVM.BlogAttributeSorting))
             {
-                switch (id.Value)
+                switch (blogCollectionCategoriesVM.BlogAttributeSorting)
                 {
-                    case 1:
+                    case "CreatedDate":
                         blogs = blogs.OrderBy(b => b.CreatedDate);
                         break;
-                    case 2:
+                    case "User":
                         blogs = blogs.OrderBy(b => b.User);
                         break;
-                    case 3:
+                    case "Title":
                         blogs = blogs.OrderBy(b => b.Title);
+                        break;
+                    case "LikeCount":
+                        blogs = blogs.OrderBy(b => b.LikeCount);
                         break;
                     default:
                         break;
                 }
             }
-            // Get all categories to populate the dropdown list
-            ViewBag.Categories = await _context.Categories.OrderBy(c => c.Name).ToListAsync();
+            // Get the final list of blogs
+            blogCollectionCategoriesVM.BlogCollection = await blogs.ToListAsync();
 
+            // Populate the categories dropdown
+            
+            blogCollectionCategoriesVM.Categories = await _context.Categories
+                .OrderBy(c => c.Name)
+                .Select(c => new SelectListItem
+                {
+                    Value = c.Id.ToString(),
+                    Text = c.Name
+                }).ToListAsync();
 
-
-            return View(await blogs.AsNoTracking().ToListAsync());
+            return View(blogCollectionCategoriesVM);
         }
 
 
@@ -103,17 +87,15 @@ namespace MVCVideoGuide.Controllers
             }
 
             var blog = await _context.Blogs
+                .Include(c => c.Comments)
                 .Include(b => b.BlogCategories)
                     .ThenInclude(bc => bc.Category)
-                .Include(c => c.Comments)
                 .FirstOrDefaultAsync(m => m.Id == id);
 
             if (blog == null)
             {
                 return NotFound();
             }
-
-            //var comments = await _context.Comments.Where(c => c.BlogId == id).ToListAsync();
 
             var blogCommentsVM = new BlogCommentsViewModel
             {
@@ -126,7 +108,7 @@ namespace MVCVideoGuide.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Details(int id, [Bind("NewComment")] BlogCommentsViewModel blogCommentsVM)
+        public async Task<IActionResult> Details(int id, BlogCommentsViewModel blogCommentsVM)
         {
             var blog = await _context.Blogs
                 .Include(b => b.Comments)
@@ -136,7 +118,6 @@ namespace MVCVideoGuide.Controllers
             {
                 return NotFound();
             }
-
             if (ModelState.IsValid)
             {
                 // Add new comment
@@ -151,14 +132,7 @@ namespace MVCVideoGuide.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Details), new { id });
             }
-            foreach (var error in ModelState)
-            {
-                foreach (var subError in error.Value.Errors)
-                {
-                    Console.WriteLine($"Error in {error.Key}: {subError.ErrorMessage}");
-                }
-            }
-            // Return ViewModel with existing blog and comments if validation fails
+
             var viewModel = new BlogCommentsViewModel
             {
                 Blog = blog,
@@ -176,32 +150,53 @@ namespace MVCVideoGuide.Controllers
         [HttpGet]
         public async Task<IActionResult> Create()
         {
-            List<Category> categories = await _context.Categories.OrderBy(c => c.Name).ToListAsync();
-            ViewBag.Categories = categories;
-            return View();
+
+            var blogCategoriesVM = new BlogCategoriesViewModel
+            {
+                Categories = await _context.Categories
+                    .OrderBy(c => c.Name)
+                    .Select(c => new SelectListItem
+                    {
+                        Value = c.Id.ToString(),
+                        Text = c.Name
+                    })
+                    .ToListAsync()
+            };
+            return View(blogCategoriesVM);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("User,Title,Text,LikeCount")] Blog blog, int[] selectedCategoryIds)
+        public async Task<IActionResult> Create(BlogCategoriesViewModel blogCategoriesVM)
         {
             if (ModelState.IsValid)
             {
-                if (selectedCategoryIds != null)
+                if (blogCategoriesVM.SelectedCategoryIds != null && blogCategoriesVM.SelectedCategoryIds.Any())
                 {
-                    var blogCategoriesToCreate = selectedCategoryIds.Select(categoryId => new BlogCategory { BlogId = blog.Id, CategoryId = categoryId });
-                    blog.BlogCategories.AddRange(blogCategoriesToCreate);
+                    var blogCategoriesToCreate = blogCategoriesVM.SelectedCategoryIds.Select(categoryId => new BlogCategory
+                    {
+                        BlogId = blogCategoriesVM.Blog.Id, CategoryId = categoryId
+                    });
+                    blogCategoriesVM.Blog.BlogCategories.AddRange(blogCategoriesToCreate);
 
-                    blog.CreatedDate = DateTime.Now;
-                    _context.Blogs.Add(blog);
+                    blogCategoriesVM.Blog.CreatedDate = DateTime.Now;
+                    _context.Blogs.Add(blogCategoriesVM.Blog);
                     await _context.SaveChangesAsync();
 
                     return RedirectToAction(nameof(Index));
                 }
             }
-            List<Category> categories = await _context.Categories.OrderBy(c => c.Name).ToListAsync();
-            ViewBag.Categories = categories;
-            return View();
+            var selectedCategoryIds = blogCategoriesVM.SelectedCategoryIds ?? Enumerable.Empty<int>();
+            blogCategoriesVM.Categories = await _context.Categories
+                .OrderBy(c => c.Name)
+                .Select(c => new SelectListItem
+                {
+                    Value = c.Id.ToString(),
+                    Text = c.Name,
+                    Selected = selectedCategoryIds.Contains(c.Id) // Mark as selected if previously chosen
+                })
+                .ToListAsync();
+            return View(blogCategoriesVM);
         }
 
 
@@ -211,33 +206,47 @@ namespace MVCVideoGuide.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
 
         // GET: Blogs/Edit/5
-        public async Task<IActionResult> Edit(int? id)
-        {
-            if (id == null)
+            public async Task<IActionResult> Edit(int? id)
             {
-                return NotFound();
-            }
-            ViewBag.Categories = await _context.Categories.OrderBy(c => c.Name).ToListAsync();
-            var blog = await _context.Blogs
-                .Include(b => b.BlogCategories)
-                    .ThenInclude(bc => bc.Category)
-                .FirstOrDefaultAsync(m => m.Id == id);
-            ViewBag.CreatedDate = DateTime.Now;
-            if (blog == null)
+                if (id == null)
+                {
+                    return NotFound();
+                }
+                var blog = await _context.Blogs
+                    .Include(b => b.BlogCategories)
+                        .ThenInclude(bc => bc.Category)
+                    .FirstOrDefaultAsync(m => m.Id == id);
+                if (blog == null)
+                {
+                    return NotFound();
+                }
+            // Get all categories
+            var allCategories = await _context.Categories
+                .OrderBy(c => c.Name)
+                .ToListAsync();
+
+            // Prepare the view model
+            var blogCategoriesVM = new BlogCategoriesViewModel
             {
-                return NotFound();
+                Blog = blog,
+                Categories = allCategories.Select(c => new SelectListItem
+                {
+                    Value = c.Id.ToString(),
+                    Text = c.Name,
+                    Selected = blog.BlogCategories.Any(bc => bc.CategoryId == c.Id) // Pre-select associated categories
+                }).ToList()
+            };
+            return View(blogCategoriesVM);
             }
-            return View(blog);
-        }
 
         // POST: Blogs/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, int[] selectedCategoryIds, [Bind("Id,CreatedDate,User,Title,Text,LikeCount")] Blog blog)
+        public async Task<IActionResult> Edit(int id, BlogCategoriesViewModel blogCategoriesVM)
         {
-            if (id != blog.Id)
+            if (id != blogCategoriesVM.Blog.Id)
             {
                 return NotFound();
             }
@@ -255,14 +264,17 @@ namespace MVCVideoGuide.Controllers
                 }
 
                 blogToUpdate.CreatedDate = DateTime.Now;
-                blogToUpdate.User = blog.User;
-                blogToUpdate.Title = blog.Title;
-                blogToUpdate.Text = blog.Text;
-                blogToUpdate.LikeCount = blog.LikeCount;
+                blogToUpdate.User = blogCategoriesVM.Blog.User;
+                blogToUpdate.Title = blogCategoriesVM.Blog.Title;
+                blogToUpdate.Text = blogCategoriesVM.Blog.Text;
+                blogToUpdate.LikeCount = blogCategoriesVM.Blog.LikeCount;
 
                 // Handle BlogCategories update manually
                 blogToUpdate.BlogCategories.Clear();
-                var blogCategoriesToUpdate = selectedCategoryIds.Select(categoryId => new BlogCategory { BlogId = blog.Id, CategoryId = categoryId });
+                var blogCategoriesToUpdate = blogCategoriesVM.SelectedCategoryIds!.Select(categoryId => new BlogCategory
+                {
+                    BlogId = blogCategoriesVM.Blog.Id, CategoryId = categoryId
+                });
                 blogToUpdate.BlogCategories.AddRange(blogCategoriesToUpdate);
 
                 try
@@ -271,7 +283,7 @@ namespace MVCVideoGuide.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!BlogExists(blog.Id))
+                    if (!BlogExists(blogCategoriesVM.Blog.Id))
                     {
                         return NotFound();
                     }
@@ -280,7 +292,15 @@ namespace MVCVideoGuide.Controllers
 
                 return RedirectToAction(nameof(Index));
             }
-            return View(blog);
+            blogCategoriesVM.Categories = await _context.Categories
+                .OrderBy(c => c.Name)
+                .Select(c => new SelectListItem
+                {
+                    Value = c.Id.ToString(),
+                    Text = c.Name
+                })
+                .ToListAsync();
+            return View(blogCategoriesVM);
         }
 
 

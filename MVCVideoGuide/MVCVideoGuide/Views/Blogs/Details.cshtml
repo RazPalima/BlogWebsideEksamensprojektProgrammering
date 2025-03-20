@@ -10,30 +10,30 @@
     <h4>Blog</h4>
     <hr />
     <dl class="row">
-        <dt class="col-sm-2">@Html.DisplayNameFor(model => model.Blog.CreatedDate)</dt>
-        <dd class="col-sm-10">@Html.DisplayFor(model => model.Blog.CreatedDate)</dd>
+        <dt class="col-sm-2">@Html.DisplayNameFor(model => model.Blog!.CreatedDate)</dt>
+        <dd class="col-sm-10">@Html.DisplayFor(model => model.Blog!.CreatedDate)</dd>
 
-        <dt class="col-sm-2">@Html.DisplayNameFor(model => model.Blog.User)</dt>
-        <dd class="col-sm-10">@Html.DisplayFor(model => model.Blog.User)</dd>
+        <dt class="col-sm-2">@Html.DisplayNameFor(model => model.Blog!.User)</dt>
+        <dd class="col-sm-10">@Html.DisplayFor(model => model.Blog!.User)</dd>
 
-        <dt class="col-sm-2">@Html.DisplayNameFor(model => model.Blog.Title)</dt>
-        <dd class="col-sm-10">@Html.DisplayFor(model => model.Blog.Title)</dd>
+        <dt class="col-sm-2">@Html.DisplayNameFor(model => model.Blog!.Title)</dt>
+        <dd class="col-sm-10">@Html.DisplayFor(model => model.Blog!.Title)</dd>
 
-        <dt class="col-sm-2">@Html.DisplayNameFor(model => model.Blog.Text)</dt>
-        <dd class="col-sm-10">@Html.DisplayFor(model => model.Blog.Text)</dd>
+        <dt class="col-sm-2">@Html.DisplayNameFor(model => model.Blog!.Text)</dt>
+        <dd class="col-sm-10">@Html.DisplayFor(model => model.Blog!.Text)</dd>
 
-        <dt class="col-sm-2">@Html.DisplayNameFor(model => model.Blog.BlogCategories)</dt>
+        <dt class="col-sm-2">@Html.DisplayNameFor(model => model.Blog!.BlogCategories)</dt>
         <dd class="col-sm-10">
-            <p>@string.Join(", ", Model.Blog.BlogCategories.Select(bc => bc.Category.Name))</p>
+            @Model.Blog!.ConcatenatedBlogCategories()
         </dd>
 
-        <dt class="col-sm-2">@Html.DisplayNameFor(model => model.Blog.LikeCount)</dt>
-        <dd class="col-sm-10">@Html.DisplayFor(model => model.Blog.LikeCount)</dd>
+        <dt class="col-sm-2">@Html.DisplayNameFor(model => model.Blog!.LikeCount)</dt>
+        <dd class="col-sm-10">@Html.DisplayFor(model => model.Blog!.LikeCount)</dd>
     </dl>
 </div>
 
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.Blog.Id">Edit</a> |
+    <a asp-action="Edit" asp-route-id="@Model.Blog!.Id">Edit</a> |
     <a asp-action="Index">Back to List</a>
 </div>
 
@@ -43,8 +43,8 @@
 <hr />
 <div class="col-md-6">
     <form asp-action="Details" method="post">
-        <input type="hidden" name="id" value="@Model.Blog.Id" />
-        <input type="hidden" asp-for="NewComment.BlogId" value="@Model.Blog.Id" />
+        <input type="hidden" name="id" value="@Model.Blog!.Id" />
+        <input type="hidden" asp-for="NewComment.BlogId" value="@Model.Blog!.Id" />
 
         <div class="form-group">
             <label asp-for="NewComment.User" class="control-label"></label>
@@ -69,13 +69,13 @@
     <thead>
         <tr>
             <td>
-                @Html.DisplayNameFor(model => model.Comments[0]!.CreatedDate)
+                @Html.DisplayNameFor(model => model.Comments[0].CreatedDate)
             </td>
             <td>
-                @Html.DisplayNameFor(model => model.Comments[0]!.User)
+                @Html.DisplayNameFor(model => model.Comments[0].User)
             </td>
             <td>
-                @Html.DisplayNameFor(model => model.Comments[0]!.Text)
+                @Html.DisplayNameFor(model => model.Comments[0].Text)
             </td>
         </tr>
     </thead>
