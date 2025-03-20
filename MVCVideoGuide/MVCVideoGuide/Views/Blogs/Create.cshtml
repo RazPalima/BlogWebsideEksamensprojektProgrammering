@@ -2,7 +2,6 @@
 
 @{
     ViewData["Title"] = "Create";
-    // var categories = ViewBag!.Categories;
 }
 
 <h1>Create</h1>
@@ -37,15 +36,6 @@
                 <label asp-for="SelectedCategoryIds" class="control-label"></label>
                 <select asp-for="SelectedCategoryIds" asp-items="Model.Categories" class="form-control"></select>
             </div>
-@*             <div class="form-group">
-                <label for="selectedCategoryIds" class="control-label">Blog Categories<br /><kbd>Ctrl + Left-click</kbd> to select more categories</label>
-                <select name="selectedCategoryIds" class="form-select" multiple required>
-                    @foreach (var category in categories)
-                    {
-                        <option value="@category.Id">@category.Name</option>
-                    }
-                </select>
-            </div> *@
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>

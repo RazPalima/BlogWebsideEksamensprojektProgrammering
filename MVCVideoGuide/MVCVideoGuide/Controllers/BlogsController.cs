@@ -27,19 +27,19 @@ namespace MVCVideoGuide.Controllers
         // GET: Blogs
         public async Task<IActionResult> Index(BlogCollectionCategoriesViewModel blogCollectionCategoriesVM)
         {
-            // Start with all blogs
+            
             IQueryable<Blog> blogs = _context.Blogs
                 .Include(b => b.BlogCategories)
                 .ThenInclude(bc => bc.Category)
                 .AsQueryable();
 
-            // Filter by selected categories
+            
             if (blogCollectionCategoriesVM.SelectedCategoryIds != null && blogCollectionCategoriesVM.SelectedCategoryIds.Any())
             {
                 blogs = blogs.Where(b => b.BlogCategories.All(bc => blogCollectionCategoriesVM.SelectedCategoryIds.Contains(bc.CategoryId)));
             }
 
-            // Sort by selected attribute
+            
             if (!string.IsNullOrEmpty(blogCollectionCategoriesVM.BlogAttributeSorting))
             {
                 switch (blogCollectionCategoriesVM.BlogAttributeSorting)
@@ -60,10 +60,10 @@ namespace MVCVideoGuide.Controllers
                         break;
                 }
             }
-            // Get the final list of blogs
+            
             blogCollectionCategoriesVM.BlogCollection = await blogs.ToListAsync();
 
-            // Populate the categories dropdown
+            
             
             blogCollectionCategoriesVM.Categories = await _context.Categories
                 .OrderBy(c => c.Name)
@@ -120,7 +120,7 @@ namespace MVCVideoGuide.Controllers
             }
             if (ModelState.IsValid)
             {
-                // Add new comment
+                
                 blog.Comments.Add(new Comment
                 {
                     CreatedDate = DateTime.Now,
@@ -186,14 +186,14 @@ namespace MVCVideoGuide.Controllers
                     return RedirectToAction(nameof(Index));
                 }
             }
-            var selectedCategoryIds = blogCategoriesVM.SelectedCategoryIds ?? Enumerable.Empty<int>();
+            
             blogCategoriesVM.Categories = await _context.Categories
                 .OrderBy(c => c.Name)
                 .Select(c => new SelectListItem
                 {
                     Value = c.Id.ToString(),
                     Text = c.Name,
-                    Selected = selectedCategoryIds.Contains(c.Id) // Mark as selected if previously chosen
+                    Selected = blogCategoriesVM.SelectedCategoryIds!.Contains(c.Id)
                 })
                 .ToListAsync();
             return View(blogCategoriesVM);
@@ -220,12 +220,12 @@ namespace MVCVideoGuide.Controllers
                 {
                     return NotFound();
                 }
-            // Get all categories
+
             var allCategories = await _context.Categories
                 .OrderBy(c => c.Name)
                 .ToListAsync();
 
-            // Prepare the view model
+           
             var blogCategoriesVM = new BlogCategoriesViewModel
             {
                 Blog = blog,
@@ -233,7 +233,7 @@ namespace MVCVideoGuide.Controllers
                 {
                     Value = c.Id.ToString(),
                     Text = c.Name,
-                    Selected = blog.BlogCategories.Any(bc => bc.CategoryId == c.Id) // Pre-select associated categories
+                    Selected = blog.BlogCategories.Any(bc => bc.CategoryId == c.Id) 
                 }).ToList()
             };
             return View(blogCategoriesVM);
@@ -253,7 +253,7 @@ namespace MVCVideoGuide.Controllers
 
             if (ModelState.IsValid)
             {
-                // Load existing Blog including navigation properties
+
                 var blogToUpdate = await _context.Blogs
                     .Include(b => b.BlogCategories)
                     .FirstOrDefaultAsync(b => b.Id == id);
@@ -269,7 +269,6 @@ namespace MVCVideoGuide.Controllers
                 blogToUpdate.Text = blogCategoriesVM.Blog.Text;
                 blogToUpdate.LikeCount = blogCategoriesVM.Blog.LikeCount;
 
-                // Handle BlogCategories update manually
                 blogToUpdate.BlogCategories.Clear();
                 var blogCategoriesToUpdate = blogCategoriesVM.SelectedCategoryIds!.Select(categoryId => new BlogCategory
                 {
